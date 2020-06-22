@@ -1,0 +1,9 @@
+{
+  "name": "skjemapublisering",
+  "version": "0.0.1",
+  "description": "NAV forms",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navikt/skjemapublisering-test.git"
+  }
+}
