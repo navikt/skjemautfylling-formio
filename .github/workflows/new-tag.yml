@@ -11,6 +11,5 @@ jobs:
         with:
           repository: navikt/skjemautfylling-formio
           token: ${{ secrets.SKJEMAPUBLISERING_TOKEN }}
-          ref: new-branch
       - name: Test done
         run: echo "DONE"
