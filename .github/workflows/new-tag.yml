@@ -1,8 +1,6 @@
 name: Update skjemabygger on new tag
 on:
   push:
-    tags:
-      - '*'
 jobs:
   create-PR:
     name: "Triggers pull request in skjemautfyller"
@@ -12,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: navikt/skjemautfylling-formio
-          token: ${{ secrets.GitHub_PAT }} # `GitHub_PAT` is a secret that contains your PAT
+          token: ${{ secrets.SKJEMAPUBLISERING_TOKEN }}
           ref: new-branch
       - name: Test done
         run: echo "DONE"
