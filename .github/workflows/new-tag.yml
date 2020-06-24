@@ -12,5 +12,6 @@ jobs:
           repository: navikt/skjemautfylling-formio
           token: ${{ secrets.SKJEMAPUBLISERING_TOKEN }}
           ref: skjemapublisering
+          fetch-depth: 0
       - name: Test done
         run: echo "DONE"
