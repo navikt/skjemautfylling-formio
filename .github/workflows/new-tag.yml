@@ -18,8 +18,7 @@ jobs:
           token: ${{ secrets.SKJEMAPUBLISERING_TOKEN }}
           ref: flesktest
           fetch-depth: 0
-      - name: Set skjemapublisering tag
-      - name: Set new skjemapublisering url and tag
+      - name: Set new skjemapublisering url using the current commit sha
         run: echo ::set-env name=NEW_SKJEMAPUBLISERING_URL::navikt/skjemapublisering-test.git#$GITHUB_SHA
       - name: Debug stuffs
         run: 'echo URL $NEW_SKJEMAPUBLISERING_URL SHA $GITHUB_SHA'
