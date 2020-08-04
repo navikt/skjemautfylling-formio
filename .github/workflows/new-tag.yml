@@ -3,6 +3,9 @@ on:
   push:
     tags:
       - 'v*.*.*'
+    branches:
+      - exact-commit-sha
+      - master
 jobs:
   commit-and-push-to-skjemautfyller:
     name: "Triggers a bump of the skjemapublisering dependency in skjemautfyller"
