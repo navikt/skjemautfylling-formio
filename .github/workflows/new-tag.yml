@@ -21,7 +21,7 @@ jobs:
       - name: Set skjemapublisering tag
         run: echo ::set-env name=SKJEMAPUBLISERING_TAG::${GITHUB_REF#refs/*/}
       - name: Set new skjemapublisering url and tag
-        run: echo ::set-env name=NEW_SKJEMAPUBLISERING_URL::git+https://github.com/navikt/skjemapublisering-test.git#$(echo ${SKJEMAPUBLISERING_TAG})
+        run: echo ::set-env name=NEW_SKJEMAPUBLISERING_URL::git+https://github.com/navikt/skjemapublisering-test.git#$GITHUB_SHA
       - name: Debug stuffs
         run: 'echo URL $NEW_SKJEMAPUBLISERING_URL SHA $GITHUB_SHA'
       - name: Update skjemapublisering version
