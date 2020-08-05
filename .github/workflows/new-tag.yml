@@ -25,11 +25,12 @@ jobs:
       - name: Update skjemapublisering version
         run: echo "`jq --arg skjemapubliseringsUrl "$NEW_SKJEMAPUBLISERING_URL" '.dependencies.skjemapublisering=$skjemapubliseringsUrl' package.json`" > package.json
       - name: Check package.json
-        run: cat package.json
+        run: npm install
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Bump skjemapublisering dependency" -a
+          git add package*.json
+          git commit -m "Bump skjemapublisering dependency"
       - name: Push changes
         run: git push
