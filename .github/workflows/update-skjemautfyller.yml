@@ -1,8 +1,9 @@
-name: Update skjemautfyller on new tag
+name: Update skjemautfyller on master push
 on:
   push:
-    tags:
-      - 'v*.*.*'
+    branches:
+      - exact-commit-sha
+      - master
 jobs:
   commit-and-push-to-skjemautfyller:
     name: "Triggers a bump of the skjemapublisering dependency in skjemautfyller"
@@ -15,18 +16,17 @@ jobs:
           token: ${{ secrets.SKJEMAPUBLISERING_TOKEN }}
           ref: skjemapublisering
           fetch-depth: 0
-      - name: Set skjemapublisering tag
-        run: echo ::set-env name=SKJEMAPUBLISERING_TAG::${GITHUB_REF#refs/*/}
-      - name: Set new skjemapublisering url and tag
-        run: echo ::set-env name=NEW_SKJEMAPUBLISERING_URL::git+https://github.com/navikt/skjemapublisering-test.git#$(echo ${SKJEMAPUBLISERING_TAG})
+      - name: Set new skjemapublisering url using the current commit sha
+        run: echo ::set-env name=NEW_SKJEMAPUBLISERING_URL::navikt/skjemapublisering-test.git#$GITHUB_SHA
       - name: Update skjemapublisering version
         run: echo "`jq --arg skjemapubliseringsUrl "$NEW_SKJEMAPUBLISERING_URL" '.dependencies.skjemapublisering=$skjemapubliseringsUrl' package.json`" > package.json
-      - name: Check package.json
-        run: cat package.json
+      - name: Check package.json and generate package-lock.json
+        run: npm install
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Bump skjemapublisering dependency" -a
+          git add package*.json
+          git commit -m "Bump skjemapublisering dependency to $NEW_SKJEMAPUBLISERING_URL"
       - name: Push changes
         run: git push
