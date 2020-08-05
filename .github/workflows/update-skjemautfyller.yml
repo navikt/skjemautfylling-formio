@@ -1,4 +1,4 @@
-name: Update skjemautfyller on new tag
+name: Update skjemautfyller on master push
 on:
   push:
     branches:
