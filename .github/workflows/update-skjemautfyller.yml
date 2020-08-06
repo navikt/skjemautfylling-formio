@@ -5,7 +5,7 @@ on:
       - exact-commit-sha
       - master
 jobs:
-  commit-and-push-to-skjemautfyller:
+  update-skjemautfyller-master:
     name: "Triggers a bump of the skjemapublisering dependency in skjemautfyller"
     runs-on: ubuntu-latest
     steps:
@@ -14,7 +14,7 @@ jobs:
         with:
           repository: navikt/skjemautfylling-formio
           token: ${{ secrets.SKJEMAPUBLISERING_TOKEN }}
-          ref: skjemapublisering
+          ref: master
           fetch-depth: 0
       - name: Set new skjemapublisering url using the current commit sha
         run: echo ::set-env name=NEW_SKJEMAPUBLISERING_URL::navikt/skjemapublisering-test.git#$GITHUB_SHA
@@ -22,6 +22,10 @@ jobs:
         run: echo "`jq --arg skjemapubliseringsUrl "$NEW_SKJEMAPUBLISERING_URL" '.dependencies.skjemapublisering=$skjemapubliseringsUrl' package.json`" > package.json
       - name: Check package.json and generate package-lock.json
         run: npm install
+      - name: test
+        run: npm run test
+      - name: build
+        run: npm run build
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
