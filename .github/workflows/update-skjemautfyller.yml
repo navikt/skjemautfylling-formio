@@ -27,8 +27,6 @@ jobs:
         run: echo "`jq --arg skjemapubliseringsUrl "$NEW_SKJEMAPUBLISERING_URL" '.dependencies.skjemapublisering=$skjemapubliseringsUrl' package.json`" > package.json
       - name: Check package.json and generate package-lock.json
         run: npm install
-      - name: Provoke error
-        run: ls groenn-frosk
       - name: test
         run: npm run test
       - name: build
