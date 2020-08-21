@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-test
+https://github.com/{github_id}/{repository}/workflows/{workflow_name}/badge.svg
 
 ## Available Scripts
 
