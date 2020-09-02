@@ -41,4 +41,4 @@ jobs:
         run: git push
       - name: Send message when job fails
         if: ${{ failure() }}
-        run: cat $GITHUB_EVENT_PATH | bin/trigger-build-aborted.js
+        run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.js build-aborted
