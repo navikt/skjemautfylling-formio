@@ -1,6 +1,7 @@
 import { useParams, useHistory } from "react-router-dom";
 import { Sidetittel } from "nav-frontend-typografi";
-import NavForm from "./NavForm";
+// import NavForm from "./NavForm";
+import NavForm from "skjemabygging-formio/src/components/NavForm";
 import React from "react";
 
 export const FormPage = ({ forms, submission, setSubmission }) => {
