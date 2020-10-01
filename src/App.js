@@ -9,6 +9,7 @@ import { FormPage } from "./components/FormPage";
 import { styled } from "@material-ui/styles";
 import { ResultPage } from "./components/ResultPage";
 import { AllForms } from "./components/AllForms";
+import { MyCoolButton, OtherComponent } from "spike-frontend-package";
 
 Components.setComponents(components);
 
@@ -18,6 +19,8 @@ function App({ forms, className }) {
     <div className={className}>
       <Switch>
         <Route exact path="/">
+          <OtherComponent>Pølsefar</OtherComponent>
+          <MyCoolButton title="Flesk" onClick={() => alert("Flesk, flesk")}></MyCoolButton>
           <AllForms forms={forms} />
         </Route>
         <Route exact path="/:formpath">
