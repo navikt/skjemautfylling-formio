@@ -1,5 +1,5 @@
 import { Innholdstittel, Normaltekst, Sidetittel } from "nav-frontend-typografi";
-import NavForm from "./NavForm";
+import { NavForm } from "skjemabygging-formio";
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Panel from "nav-frontend-paneler";

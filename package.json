@@ -36,10 +36,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3",
-    "skjemapublisering": "navikt/skjemapublisering-test.git#koselig-med-peis",
-    "spike-frontend-package": "git+file:/Users/syverenstad/IdeaProjects/spike-frontend-package/.git",
-    "dummy-counter": "git+file:/Users/syverenstad/IdeaProjects/dummy-counter/.git",
-    "spike-rollup-lib": "git+file:/Users/syverenstad/IdeaProjects/spike-rollup-lib/.git"
+    "skjemapublisering": "git+file:/Users/syverenstad/IdeaProjects/skjemapublisering-test/.git#koselig-med-peis"
   },
   "devDependencies": {
     "husky": "^3.1.0",

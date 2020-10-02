@@ -9,9 +9,6 @@ import { FormPage } from "./components/FormPage";
 import { styled } from "@material-ui/styles";
 import { ResultPage } from "./components/ResultPage";
 import { AllForms } from "./components/AllForms";
-import { MyCoolButton, OtherComponent } from "spike-frontend-package";
-import Dummy from "dummy-counter";
-import { howLongUntilLunch, LunchComponent } from "spike-rollup-lib";
 
 Components.setComponents(components);
 
@@ -21,10 +18,6 @@ function App({ forms, className }) {
     <div className={className}>
       <Switch>
         <Route exact path="/">
-          <Dummy>Her er en dummy</Dummy>
-          <LunchComponent></LunchComponent>
-          <OtherComponent>{howLongUntilLunch()}</OtherComponent>
-          <MyCoolButton title="Flesk" onClick={() => alert("Flesk, flesk")}></MyCoolButton>
           <AllForms forms={forms} />
         </Route>
         <Route exact path="/:formpath">
