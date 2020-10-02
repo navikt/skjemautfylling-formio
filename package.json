@@ -36,7 +36,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3",
-    "skjemapublisering": "git+file:/Users/syverenstad/IdeaProjects/skjemapublisering-test/.git#koselig-med-peis"
+    "skjemapublisering": "github:navikt/skjemapublisering-test#koselig-med-peis"
   },
   "devDependencies": {
     "husky": "^3.1.0",
