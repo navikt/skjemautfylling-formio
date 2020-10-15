@@ -7,6 +7,6 @@
     "url": "git+https://github.com/navikt/skjemapublisering-test.git"
   },
   "dependencies": {
-    "skjemabygging-formio": "github:navikt/skjemabygging-formio#`git describe --always --match 'NOT A TAG' --abbrev=0 --dirty` "
+    "skjemabygging-formio": "github:navikt/skjemabygging-formio#94fe52453243bad343526dfe878d17bc18851d64-dirty"
   }
 }
