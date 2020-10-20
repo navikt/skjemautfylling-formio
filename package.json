@@ -4,7 +4,7 @@
   "description": "NAV forms",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/navikt/skjemapublisering-test.git"
+    "url": "git+https://github.com/navikt/skjemapublisering.git"
   },
   "dependencies": {
     "skjemabygging-formio": "github:navikt/skjemabygging-formio#5eca7888ad5911893578226d1d74839e91157d6d"
