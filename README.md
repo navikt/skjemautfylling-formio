@@ -1,4 +1,4 @@
-skjemapublisering-test
+skjemapublisering
 ================
 
 Dette er et testrepo for å undersøke hvordan vi kan "publisere" skjemaer fra en applikasjon til en annen.
