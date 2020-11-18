@@ -129,8 +129,11 @@ export function SummaryPage({ form, submission }) {
         </div>
         <div className="list-inline-item">
           <Link className="btn btn-primary btn-wizard-nav-next" to={`/${form.path}/forbered-innsending`}>
-            Gå videre
+            Send digitalt
           </Link>
+        </div>
+        <div className="list-inline-item">
+          <Link to={`/${form.path}/forbered-brev`}>Send i posten</Link>
         </div>
       </nav>
     </SummaryContent>

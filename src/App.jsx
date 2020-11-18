@@ -9,6 +9,7 @@ import { FillInFormPage } from "./components/FillInFormPage";
 import { styled } from "@material-ui/styles";
 import { SummaryPage } from "./components/SummaryPage";
 import { PrepareSubmitPage } from "./components/PrepareSubmitPage";
+import { PrepareLetterPage } from "./components/PrepareLetterPage";
 import { AllForms } from "./components/AllForms";
 import { FormPageWrapper } from "./components/FormPageWrapper";
 import navdesign from "template";
@@ -65,6 +66,21 @@ function App({ forms, className }) {
                 hasSubmission={true}
               >
                 {(form, submission) => <PrepareSubmitPage form={form} submission={submission} />}
+              </FormPageWrapper>
+            );
+          }}
+        />
+        <Route
+          path="/:formpath/forbered-brev"
+          render={(routeProps) => {
+            return (
+              <FormPageWrapper
+                routeProps={routeProps}
+                forms={forms}
+                submissionObject={submissionObject}
+                hasSubmission={true}
+              >
+                {(form, submission) => <PrepareLetterPage form={form} submission={submission} />}
               </FormPageWrapper>
             );
           }}
