@@ -2,7 +2,6 @@ name: Update skjemautfyller on master push
 on:
   push:
     branches:
-      - test-actions
       - master
 jobs:
   update-skjemautfyller-master:
@@ -41,7 +40,7 @@ jobs:
           git add package*.json
           git commit -m "Bump skjemapublisering dependency to $NEW_SKJEMAPUBLISERING_URL"
       - name: Push changes
-        run: git push --dry-run
+        run: git push
       - name: Send message when job fails
         if: ${{ failure() }}
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.js build-aborted
