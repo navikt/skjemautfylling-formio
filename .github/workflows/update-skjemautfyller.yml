@@ -13,7 +13,7 @@ jobs:
       PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
       PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
       PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
-      NEW_SKJEMAPUBLISERING_URL: navikt/skjemapublisering.git#${{env.GITHUB_SHA}}
+      NEW_SKJEMAPUBLISERING_URL: navikt/skjemapublisering.git#${{ env.GITHUB_SHA }}
     steps:
       #- name: Set new skjemapublisering url using the current commit sha
       #  run: echo "NEW_SKJEMAPUBLISERING_URL=navikt/skjemapublisering.git#$GITHUB_SHA" >> $GITHUB_ENV
