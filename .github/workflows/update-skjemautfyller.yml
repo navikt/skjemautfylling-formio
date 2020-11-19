@@ -14,8 +14,6 @@ jobs:
       PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
       NEW_SKJEMAPUBLISERING_URL: navikt/skjemapublisering.git#${{ github.sha }}
     steps:
-      #- name: Set new skjemapublisering url using the current commit sha
-      #  run: echo "NEW_SKJEMAPUBLISERING_URL=navikt/skjemapublisering.git#$GITHUB_SHA" >> $GITHUB_ENV
       - name: Checkout skjemautfyller
         uses: actions/checkout@v2
         with:
