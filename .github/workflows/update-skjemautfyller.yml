@@ -23,6 +23,8 @@ jobs:
           fetch-depth: 0
       - name: Set new skjemapublisering url using the current commit sha
         run: echo "NEW_SKJEMAPUBLISERING_URL=navikt/skjemapublisering.git#$GITHUB_SHA" >> $GITHUB_ENV
+      - name: Echo NEW_SKJEMAPUBLISERING_URL
+        run: echo $NEW_SKJEMAPUBLISERING_URL
       - name: Update skjemapublisering version
         run: echo "`jq --arg skjemapubliseringsUrl "$NEW_SKJEMAPUBLISERING_URL" '.dependencies.skjemapublisering=$skjemapubliseringsUrl' package.json`" > package.json
       - name: Check package.json and generate package-lock.json
