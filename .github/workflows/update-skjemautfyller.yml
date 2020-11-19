@@ -2,7 +2,7 @@ name: Update skjemautfyller on master push
 on:
   push:
     branches:
-      - exact-commit-sha
+      - test-actions
       - master
 jobs:
   update-skjemautfyller-master:
@@ -22,7 +22,7 @@ jobs:
           ref: master
           fetch-depth: 0
       - name: Set new skjemapublisering url using the current commit sha
-        run: echo ::set-env name=NEW_SKJEMAPUBLISERING_URL::navikt/skjemapublisering.git#$GITHUB_SHA
+        run: echo "NEW_SKJEMAPUBLISERING_URL=navikt/skjemapublisering.git#$GITHUB_SHA" >> $GITHUB_ENV
       - name: Update skjemapublisering version
         run: echo "`jq --arg skjemapubliseringsUrl "$NEW_SKJEMAPUBLISERING_URL" '.dependencies.skjemapublisering=$skjemapubliseringsUrl' package.json`" > package.json
       - name: Check package.json and generate package-lock.json
@@ -38,7 +38,7 @@ jobs:
           git add package*.json
           git commit -m "Bump skjemapublisering dependency to $NEW_SKJEMAPUBLISERING_URL"
       - name: Push changes
-        run: git push
+        run: git push --dry-run
       - name: Send message when job fails
         if: ${{ failure() }}
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.js build-aborted
