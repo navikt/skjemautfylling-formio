@@ -2,7 +2,6 @@ name: Update skjemautfyller on master push
 on:
   push:
     branches:
-      - exact-commit-sha
       - master
 jobs:
   update-skjemautfyller-master:
@@ -13,6 +12,7 @@ jobs:
       PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
       PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
       PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
+      NEW_SKJEMAPUBLISERING_URL: navikt/skjemapublisering.git#${{ github.sha }}
     steps:
       - name: Checkout skjemautfyller
         uses: actions/checkout@v2
@@ -21,8 +21,8 @@ jobs:
           token: ${{ secrets.SKJEMAPUBLISERING_TOKEN }}
           ref: master
           fetch-depth: 0
-      - name: Set new skjemapublisering url using the current commit sha
-        run: echo ::set-env name=NEW_SKJEMAPUBLISERING_URL::navikt/skjemapublisering.git#$GITHUB_SHA
+      - name: Echo NEW_SKJEMAPUBLISERING_URL
+        run: echo $NEW_SKJEMAPUBLISERING_URL
       - name: Update skjemapublisering version
         run: echo "`jq --arg skjemapubliseringsUrl "$NEW_SKJEMAPUBLISERING_URL" '.dependencies.skjemapublisering=$skjemapubliseringsUrl' package.json`" > package.json
       - name: Check package.json and generate package-lock.json
