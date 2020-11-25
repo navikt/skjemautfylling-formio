@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "@material-ui/styles/styled";
-import { Normaltekst, Sidetittel, Systemtittel } from "nav-frontend-typografi";
+import { Innholdstittel, Normaltekst, Sidetittel, Systemtittel } from "nav-frontend-typografi";
 import { scrollToAndSetFocus } from "../util/focus-management";
 import PropTypes from "prop-types";
 import { genererFoerstesideData } from "../util/forsteside";
@@ -33,26 +33,27 @@ export function PrepareLetterPage({ form, submission }) {
   return (
     <ResultContent tabIndex={-1}>
       <Sidetittel className="margin-bottom-large">{form.title}</Sidetittel>
-      <section className="margin-bottom-large">
-        <Systemtittel className="margin-bottom-default">1. Last ned førsteside til saken din</Systemtittel>
+      <section className="margin-bottom-default">
+        <Innholdstittel className="margin-bottom-large">Last ned søknadspapirene</Innholdstittel>
+        <Systemtittel className="margin-bottom-default">1. Du må legge ved disse vedleggene</Systemtittel>
+        <Systemtittel className="margin-bottom-default">2. Last ned søknadspapirene til saken din</Systemtittel>
         <Normaltekst className="margin-bottom-default">
-          Dette førstesidearket inneholder viktig informasjon om hvilken enhet i NAV som skal motta dokumentasjonen. Den
+          Førstesidearket inneholder viktig informasjon om hvilken enhet i NAV som skal motta dokumentasjonen. Den
           inneholder også adressen du skal sende dokumentene til.
         </Normaltekst>
         {process.env.NODE_ENV === "development" && (
-          <div className="margin-bottom-large">
-            <button className="knapp knapp--hoved" onClick={lastNedFoersteside}>
+          <div className="margin-bottom-default">
+            <button className="knapp fullbredde" onClick={lastNedFoersteside}>
               Last ned førsteside
             </button>
           </div>
         )}
-        <Systemtittel className="margin-bottom-default">2. Last ned den utfylte søknaden</Systemtittel>
         <form id={form.path} action="/fyllut/pdf-form" method="post" acceptCharset="utf-8" target="_blank" hidden>
           <textarea hidden={true} name="submission" readOnly={true} required value={JSON.stringify(submission)} />
           <textarea hidden={true} name="form" readOnly={true} required value={JSON.stringify(form)} />
         </form>
         <div>
-          <input form={form.path} className="knapp knapp--hoved" type="submit" value="Last ned Søknad" />
+          <input form={form.path} className="knapp fullbredde" type="submit" value="Last ned Søknad" />
         </div>
       </section>
       <section className="margin-bottom-large">
