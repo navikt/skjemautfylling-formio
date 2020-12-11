@@ -2,10 +2,6 @@ name: Deploy to dev
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
       test:
         description: 'Run tests? (yes/no)'
         required: true
