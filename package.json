@@ -7,6 +7,6 @@
     "url": "git+https://github.com/navikt/skjemapublisering.git"
   },
   "dependencies": {
-    "skjemabygging-formio": "github:navikt/skjemabygging-formio#720dde88d813d142a675b369799384f614aa02a1"
+    "skjemabygging-formio": "github:navikt/skjemabygging-formio#09882dad519a249af02b75f169b109790cfbf77d"
   }
 }
