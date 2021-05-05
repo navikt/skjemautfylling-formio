@@ -33,7 +33,8 @@
     "node-fetch": "^2.6.0",
     "pdfmake": "^0.1.68",
     "prom-client": "^12.0.0",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "skjemapublisering": "navikt/skjemapublisering.git#6742a8142c9fcedafb6ef9eca7e2e774904b28bf"
   },
   "devDependencies": {
     "jest": "^26.4.2",
