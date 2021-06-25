@@ -48,7 +48,7 @@ jobs:
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
           git add forms translations skjemabygging-formio
-          git commit -m "[publisering] skjema ${{ github.event.inputs.formJsonFileTitle }} og oversettelser, submodule peker til til ${{ github.event.inputs.monorepoGitHash }}"
+          git commit -m "[publisering] skjema ${{ github.event.inputs.formJsonFileTitle }} og oversettelser, submodule peker til ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
         run: git push
       - name: Notify job failure
