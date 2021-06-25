@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - mainformio
+      - ny-publiseringsflyt-med-monorepo
 env:
   IMAGE: "docker.pkg.github.com/${{ github.repository }}/fyllut:${{ github.sha }}"
   PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
