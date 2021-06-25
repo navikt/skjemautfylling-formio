@@ -1,0 +1,3 @@
+[submodule "skjemabygging-formio"]
+	path = skjemabygging-formio
+	url = https://github.com/navikt/skjemabygging-formio

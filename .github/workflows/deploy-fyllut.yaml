@@ -22,6 +22,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true
+      - uses: "actions/setup-node@v1"
+        with:
+          node-version: '14.17.0'
       - name: build shared-components
         working-directory: ./skjemabygging-formio/packages/shared-components
         run: yarn install --frozen-lockfile && yarn build
@@ -62,7 +65,7 @@ jobs:
       - name: Notify job failure
         if: ${{ failure() }}
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs build-aborted
-  deploy-skjemautfylling-formio-to-labs:
+  deploy-fyllut-to-labs:
     name: "Deploy 'fyllut' to labs"
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
