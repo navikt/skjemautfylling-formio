@@ -46,19 +46,19 @@ jobs:
         working-directory: ./skjemabygging-formio/packages/fyllut
         run: echo ::set-output name=SHA::$(git rev-parse HEAD)
         id: find-skjemautfylling-formio-sha
-      - name: "Copy skjema and translation into docker build context"
+      - name: "Copy forms and translations into docker build context"
         run: |
-          cp -r ./skjema ./skjemabygging-formio/packages/fyllut/temp-skjema
-          cp -r ./translation ./skjemabygging-formio/packages/fyllut/temp-translation
+          cp -r ./forms ./skjemabygging-formio/packages/fyllut/temp-forms
+          cp -r ./translations ./skjemabygging-formio/packages/fyllut/temp-translations
         working-directory: .
-      - name: "Build and publish Docker formio-image"
+      - name: "Build and publish Docker image"
         working-directory: ./skjemabygging-formio/packages/fyllut
         run: >
           docker build --pull --tag ${IMAGE}
           --build-arg git_sha=${{ github.sha }}
           --build-arg monorepo_git_sha=${{ steps.find-skjemautfylling-formio-sha.SHA }}
-          --build-arg skjema_dir=temp-skjema
-          --build-arg translation_dir=temp-translation .
+          --build-arg skjema_dir=temp-forms
+          --build-arg translation_dir=temp-translations .
           && echo ${{ secrets.GITHUB_TOKEN }} | docker login
           --username ${{ github.repository }} --password-stdin https://docker.pkg.github.com
           && docker push ${IMAGE}
