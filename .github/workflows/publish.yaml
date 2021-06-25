@@ -1,0 +1,57 @@
+name: 'Publiser skjemadefinisjoner, oversettelser og fyllut'
+on:
+  workflow_dispatch:
+    inputs:
+      formJsonFileTitle:
+        description: name of the form.json schema
+        required: true
+      formJson:
+        description: Form.io json schema
+        required: true
+      translationJson:
+        description: translations for the form
+        required: false
+      monorepoGitHash:
+        description: git hash of the monorepo
+        required: true
+env:
+  PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
+  PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
+  PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
+  PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
+jobs:
+  publish:
+    name: "Publish"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.AKG_PAT }}
+      - run: yarn install
+        name: Install deps notification message
+      - name: "Update forms"
+        working-directory: forms
+        run: echo ${{ toJSON(github.event.inputs.formJson) }} > ${{ github.event.inputs.formJsonFileTitle }}.json
+      - name: "Update translations"
+        if: github.event.inputs.translationJson
+        working-directory: translations
+        run: echo ${{ toJSON(github.event.inputs.translationJson) }} > ${{ github.event.inputs.formJsonFileTitle }}.json
+      - name: "Update submodule"
+        run: git submodule update --init --force
+      - name: "Checkout desired submodule commit"
+        working-directory: skjemabygging-formio
+        run: |
+          ls -l
+          git checkout ${{ github.event.inputs.monorepoGitHash }}
+      - name: "Commit changes"
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "github-actions"
+          git add forms translations skjemabygging-formio
+          git commit -m "[publisering] skjema ${{ github.event.inputs.formJsonFileTitle }} og oversettelser, submodule peker til til ${{ github.event.inputs.monorepoGitHash }}"
+      - name: "Push changes"
+        run: git push
+      - name: Notify job failure
+        if: github.ref == 'refs/heads/main' && failure()
+        run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs publish-aborted
+
