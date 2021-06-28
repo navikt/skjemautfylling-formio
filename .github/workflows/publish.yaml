@@ -15,10 +15,10 @@ on:
         description: git hash of the monorepo
         required: true
 env:
-  PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
-  PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
-  PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
-  PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
+  PUSHER_APP_ID: ${{ secrets.ALTERNATE_PUSHER_APP_ID }}
+  PUSHER_APP_KEY: ${{ secrets.ALTERNATE_PUSHER_APP_KEY }}
+  PUSHER_APP_SECRET: ${{ secrets.ALTERNATE_PUSHER_APP_SECRET }}
+  PUSHER_APP_CLUSTER: ${{ secrets.ALTERNATE_PUSHER_APP_CLUSTER }}
 jobs:
   publish:
     name: "Publish"
