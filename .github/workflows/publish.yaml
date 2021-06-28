@@ -27,8 +27,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.AKG_PAT }}
-      - run: yarn install
-        name: Install deps notification message
+      - name: "Install deps for notification message"
+        run: yarn install
       - name: "Update forms"
         working-directory: forms
         run: echo ${{ toJSON(github.event.inputs.formJson) }} > ${{ github.event.inputs.formJsonFileTitle }}.json
