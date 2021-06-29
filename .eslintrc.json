@@ -1,0 +1,15 @@
+{
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-unused-labels": "error",
+    "no-unused-vars": "error",
+    "no-duplicate-imports": "error"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true
+  }
+}
