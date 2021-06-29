@@ -66,8 +66,8 @@ jobs:
       - name: "Notify job failure"
         if: ${{ failure() }}
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs build-aborted
-  deploy-fyllut-to-labs:
-    name: "Deploy 'fyllut' to labs"
+  deploy-fyllut-to-prod:
+    name: "Deploy 'fyllut' to prod"
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
@@ -77,7 +77,7 @@ jobs:
           submodules: true
       - name: "Install deps for notification message"
         run: yarn install
-      - name: "Deploy to LABS"
+      - name: "Deploy to prod"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
