@@ -5,11 +5,11 @@ on:
       formJsonFileTitle:
         description: name of the form.json schema
         required: true
-      formJson:
-        description: Form.io json schema
+      encodedFormJson:
+        description: Form.io json schema zlib compressed and base 64 encoded
         required: true
-      translationJson:
-        description: translations for the form
+      encodedTranslationJson:
+        description: translations for the form zlib compressed and base 64 encoded
         required: false
       monorepoGitHash:
         description: git hash of the monorepo
@@ -31,11 +31,11 @@ jobs:
         run: yarn install
       - name: "Update forms"
         working-directory: forms
-        run: echo ${{ toJSON(github.event.inputs.formJson) }} > ${{ github.event.inputs.formJsonFileTitle }}.json
+        run: echo ${{github.event.inputs.encodedFormJson}} | base64 -d | gzip -d > ${{ github.event.inputs.formJsonFileTitle }}.json
       - name: "Update translations"
-        if: github.event.inputs.translationJson
+        if: github.event.inputs.encodedTranslationJson
         working-directory: translations
-        run: echo ${{ toJSON(github.event.inputs.translationJson) }} > ${{ github.event.inputs.formJsonFileTitle }}.json
+        run: echo ${{github.event.inputs.encodedTranslationJson}} | base64 -d | gzip -d > ${{ github.event.inputs.formJsonFileTitle }}.json
       - name: "Update submodule"
         run: git submodule update --init --force
       - name: "Checkout desired submodule commit"
