@@ -57,7 +57,7 @@ jobs:
         run: >
           docker build --pull --tag ${IMAGE}
           --build-arg git_sha=${{ github.sha }}
-          --build-arg monorepo_git_sha=${{ steps.find-skjemautfylling-formio-sha.SHA }}
+          --build-arg monorepo_git_sha=${{ steps.find-skjemautfylling-formio-sha.outputs.SHA }}
           --build-arg skjema_dir=temp-forms
           --build-arg translation_dir=temp-translations .
           && echo ${{ secrets.GITHUB_TOKEN }} | docker login
