@@ -4,10 +4,10 @@ on:
     inputs:
       formJsonFileTitle:
         description: name of the form.json schema
-        required: true
+        required: false
       encodedFormJson:
         description: Form.io json schema zlib compressed and base 64 encoded
-        required: true
+        required: false
       encodedTranslationJson:
         description: translations for the form zlib compressed and base 64 encoded
         required: false
@@ -26,10 +26,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          fetch-depth: 0
           token: ${{ secrets.AKG_PAT }}
+      - name: "If publish to labs-deploy, fetch latest from master"
+        if: github.ref == 'refs/heads/labs-deploy'
+        run: git merge origin/master
       - name: "Install deps for notification message"
         run: yarn install
       - name: "Update forms"
+        if: github.event.inputs.encodedFormJson
         working-directory: forms
         run: echo ${{github.event.inputs.encodedFormJson}} | base64 -d | gzip -d > ${{ github.event.inputs.formJsonFileTitle }}.json
       - name: "Update translations"
@@ -52,6 +57,6 @@ jobs:
       - name: "Push changes"
         run: git push
       - name: Notify job failure
-        if: github.ref == 'refs/heads/main' && failure()
+        if: github.ref == 'refs/heads/master' && failure()
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs publish-aborted
 
