@@ -4,10 +4,10 @@ on:
     inputs:
       formJsonFileTitle:
         description: name of the form.json schema
-        required: false
+        required: true
       encodedFormJson:
         description: Form.io json schema zlib compressed and base 64 encoded
-        required: false
+        required: true
       encodedTranslationJson:
         description: translations for the form zlib compressed and base 64 encoded
         required: false
@@ -26,15 +26,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-          token: ${{ secrets.AKG_PAT }}
-      - name: "If publish to labs-deploy, fetch latest from master"
-        if: github.ref == 'refs/heads/labs-deploy'
-        run: git merge origin/master
+          token: ${{ secrets.TEAM_ACCESS_TOKEN }}
       - name: "Install deps for notification message"
         run: yarn install
       - name: "Update forms"
-        if: github.event.inputs.encodedFormJson
         working-directory: forms
         run: echo ${{github.event.inputs.encodedFormJson}} | base64 -d | gzip -d > ${{ github.event.inputs.formJsonFileTitle }}.json
       - name: "Update translations"
