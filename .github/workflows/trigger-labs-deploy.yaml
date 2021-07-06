@@ -1,6 +1,7 @@
 name: 'Trigger labs deploy'
 on:
   workflow_dispatch:
+    inputs:
       monorepoGitHash:
         description: git hash of the monorepo
         required: true
