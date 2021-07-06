@@ -111,3 +111,21 @@ jobs:
           "CLUSTER": "labs-gcp"
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/labs.yaml"
+
+  deploy-fyllut-forhandsvisning-to-labs:
+    name: "Deploy 'fyllut'-forhåndsvisning to labs"
+    if: github.ref == 'refs/heads/labs-deploy'
+    needs: "package-and-push-fyllut"
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: "Deploy to labs"
+        uses: "nais/deploy/actions/deploy@v1"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "labs-gcp"
+          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
+          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/labs-forhandsvisning.yaml"
