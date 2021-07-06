@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.AKG_PAT }}
+          token: ${{ secrets.TEAM_ACCESS_TOKEN }}
       - name: "Install deps for notification message"
         run: yarn install
       - name: "Update forms"
@@ -52,6 +52,6 @@ jobs:
       - name: "Push changes"
         run: git push
       - name: Notify job failure
-        if: github.ref == 'refs/heads/main' && failure()
+        if: github.ref == 'refs/heads/master' && failure()
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs publish-aborted
 

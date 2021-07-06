@@ -1,0 +1,32 @@
+name: 'Trigger labs deploy'
+on:
+  workflow_dispatch:
+    inputs:
+      monorepoGitHash:
+        description: git hash of the monorepo
+        required: true
+jobs:
+  publish:
+    name: "Prepare deploy to labs"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: labs-deploy
+          fetch-depth: 0
+          token: ${{ secrets.TEAM_ACCESS_TOKEN }}
+      - name: "Fetch latest forms and translations from master"
+        run: git merge origin/master
+      - name: "Update submodule"
+        run: git submodule update --init --force
+      - name: "Checkout desired submodule commit"
+        working-directory: skjemabygging-formio
+        run: git checkout ${{ github.event.inputs.monorepoGitHash }}
+      - name: "Commit changes"
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "github-actions"
+          git add skjemabygging-formio
+          git commit -m "[labs-deploy] submodule peker til ${{ github.event.inputs.monorepoGitHash }}"
+      - name: "Push changes"
+        run: git push
