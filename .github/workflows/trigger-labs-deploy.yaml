@@ -12,11 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: labs-deploy
+          ref: test-delingslenke
           fetch-depth: 0
           token: ${{ secrets.TEAM_ACCESS_TOKEN }}
-      - name: "Fetch latest forms and translations from master"
-        run: git merge origin/master
       - name: "Update submodule"
         run: git submodule update --init --force
       - name: "Checkout desired submodule commit"
@@ -27,6 +25,6 @@ jobs:
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
           git add skjemabygging-formio
-          git commit -m "[labs-deploy] submodule peker til ${{ github.event.inputs.monorepoGitHash }}"
+          git commit -m "[test-delingslenke] submodule peker til ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
         run: git push

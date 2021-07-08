@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - master
-      - labs-deploy
+      - test-delingslenke
 env:
-  IMAGE: "docker.pkg.github.com/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-labs' }}:${{ github.sha }}"
+  IMAGE: "docker.pkg.github.com/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-delingslenke' }}:${{ github.sha }}"
   PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
   PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
@@ -96,7 +96,7 @@ jobs:
 
   deploy-fyllut-to-labs:
     name: "Deploy 'fyllut' to labs"
-    if: github.ref == 'refs/heads/labs-deploy'
+    if: github.ref == 'refs/heads/test-delingslenke'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
@@ -114,7 +114,7 @@ jobs:
 
   deploy-fyllut-forhandsvisning-to-labs:
     name: "Deploy 'fyllut'-forhåndsvisning to labs"
-    if: github.ref == 'refs/heads/labs-deploy'
+    if: github.ref == 'refs/heads/test-delingslenke'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
