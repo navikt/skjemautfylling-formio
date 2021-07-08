@@ -15,6 +15,10 @@ jobs:
           ref: labs-deploy
           fetch-depth: 0
           token: ${{ secrets.TEAM_ACCESS_TOKEN }}
+      - name: "Git config user email and name"
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "github-actions"
       - name: "Fetch latest forms and translations from master"
         run: git merge origin/master
       - name: "Update submodule"
@@ -24,8 +28,6 @@ jobs:
         run: git checkout ${{ github.event.inputs.monorepoGitHash }}
       - name: "Commit changes"
         run: |
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "github-actions"
           git add skjemabygging-formio
           git commit -m "[labs-deploy] submodule peker til ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
