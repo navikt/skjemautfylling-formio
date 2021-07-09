@@ -94,6 +94,20 @@ jobs:
         if: ${{ failure() }}
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs build-aborted
 
+  inspect-prod-deployment:
+    name: "Inspect prod deployment"
+    if: always() && github.ref == 'refs/heads/master'
+    needs: deploy-fyllut-to-prod
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: "Slack notification if unsuccessful"
+        if: needs.deploy-fyllut-to-prod.result != 'success'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_FOOTER: "Deploy av fyllut til prod har feilet."
+          SLACK_COLOR: failure
+
   deploy-fyllut-to-labs:
     name: "Deploy 'fyllut' to labs"
     if: github.ref == 'refs/heads/labs-deploy'
