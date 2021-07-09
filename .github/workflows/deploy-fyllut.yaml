@@ -94,14 +94,13 @@ jobs:
         if: ${{ failure() }}
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs build-aborted
 
-  inspect-prod-deployment:
-    name: "Inspect prod deployment"
-    if: always() && github.ref == 'refs/heads/master'
+  notify-prod-deployment-failure:
+    name: "Notify prod deployment failure"
+    if: failure() && github.ref == 'refs/heads/master'
     needs: deploy-fyllut-to-prod
     runs-on: "ubuntu-18.04"
     steps:
-      - name: "Slack notification if unsuccessful"
-        if: needs.deploy-fyllut-to-prod.result != 'success'
+      - name: "Slack notification"
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
@@ -144,14 +143,13 @@ jobs:
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/labs-forhandsvisning.yaml"
 
-  inspect-labs-deployment:
-    name: "Inspect labs deployment"
-    if: always() && github.ref == 'refs/heads/labs-deploy'
+  notify-labs-deployment-failure:
+    name: "Notify labs deployment failure"
+    if: failure() && github.ref == 'refs/heads/labs-deploy'
     needs: [deploy-fyllut-to-labs, deploy-fyllut-forhandsvisning-to-labs]
     runs-on: "ubuntu-18.04"
     steps:
-      - name: "Slack notification if unsuccessful"
-        if: needs.deploy-fyllut-to-labs.result != 'success' || needs.deploy-fyllut-forhandsvisning-to-labs.result != 'success'
+      - name: "Slack notification"
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
