@@ -129,3 +129,17 @@ jobs:
           "CLUSTER": "labs-gcp"
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/labs-forhandsvisning.yaml"
+
+  inspect-labs-deployment:
+    name: "Inspect labs deployment"
+    if: always() && github.ref == 'refs/heads/labs-deploy'
+    needs: [deploy-fyllut-to-labs, deploy-fyllut-forhandsvisning-to-labs]
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: "Slack notification if unsuccessful"
+        if: needs.deploy-fyllut-to-labs.result != 'success' || needs.deploy-fyllut-forhandsvisning-to-labs.result != 'success'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_FOOTER: "Deploy av fyllut til labs har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
+          SLACK_COLOR: "#ff9100"
