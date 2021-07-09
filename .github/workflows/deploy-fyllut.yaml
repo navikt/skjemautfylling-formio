@@ -94,6 +94,19 @@ jobs:
         if: ${{ failure() }}
         run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs build-aborted
 
+  notify-prod-deployment-failure:
+    name: "Notify prod deployment failure"
+    if: failure() && github.ref == 'refs/heads/master'
+    needs: deploy-fyllut-to-prod
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: "Slack notification"
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_FOOTER: "Deploy av fyllut til prod har feilet."
+          SLACK_COLOR: failure
+
   deploy-fyllut-to-labs:
     name: "Deploy 'fyllut' to labs"
     if: github.ref == 'refs/heads/labs-deploy'
@@ -111,3 +124,34 @@ jobs:
           "CLUSTER": "labs-gcp"
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/labs.yaml"
+
+  deploy-fyllut-forhandsvisning-to-labs:
+    name: "Deploy 'fyllut'-forhåndsvisning to labs"
+    if: github.ref == 'refs/heads/labs-deploy'
+    needs: "package-and-push-fyllut"
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: "Deploy to labs"
+        uses: "nais/deploy/actions/deploy@v1"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "labs-gcp"
+          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
+          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/labs-forhandsvisning.yaml"
+
+  notify-labs-deployment-failure:
+    name: "Notify labs deployment failure"
+    if: failure() && github.ref == 'refs/heads/labs-deploy'
+    needs: [deploy-fyllut-to-labs, deploy-fyllut-forhandsvisning-to-labs]
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: "Slack notification"
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_FOOTER: "Deploy av fyllut til labs har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
+          SLACK_COLOR: "#ff9100"

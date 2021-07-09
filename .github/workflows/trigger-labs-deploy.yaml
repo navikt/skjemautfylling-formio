@@ -29,6 +29,6 @@ jobs:
       - name: "Commit changes"
         run: |
           git add skjemabygging-formio
-          git commit -m "[labs-deploy] submodule peker til ${{ github.event.inputs.monorepoGitHash }}"
+          git commit -m "[labs-deploy] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
         run: git push
