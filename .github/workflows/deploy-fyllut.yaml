@@ -27,20 +27,20 @@ jobs:
           node-version: '14.17.0'
       - name: "Install deps for notification message"
         run: yarn install
+      - name: "Prepare local dependencies for shared packages"
+        working-directory: ./skjemabygging-formio
+        run: node bin/prepare-production-build.mjs
+      - name: "Build shared-domain"
+        working-directory: ./skjemabygging-formio/packages/shared-domain
+        run: yarn install --frozen-lockfile && yarn build
       - name: "Build shared-components"
         working-directory: ./skjemabygging-formio/packages/shared-components
         run: yarn install --frozen-lockfile && yarn build
-      - name: "Frontend: prepare local dependencies"
-        working-directory: ./skjemabygging-formio
-        run: node bin/deploy-context.mjs ./packages/fyllut --replace
       - name: "Frontend: install dependencies and build"
         working-directory: ./skjemabygging-formio/packages/fyllut
         run: yarn install --frozen-lockfile && yarn build:prod
         env:
           REACT_APP_GIT_VERSION: ${{ github.sha }}
-      - name: "Backend: prepare local dependencies"
-        working-directory: ./skjemabygging-formio
-        run: node bin/deploy-context.mjs ./packages/fyllut/server --replace
       - name: "Backend: install dependencies"
         working-directory: ./skjemabygging-formio/packages/fyllut/server
         run: yarn install --frozen-lockfile
