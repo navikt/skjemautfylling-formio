@@ -5,6 +5,9 @@ on:
       formJsonFileTitle:
         description: name of the form.json schema
         required: true
+      formDescription:
+        description: short description of the form, to be included in commit message
+        required: false
       encodedFormJson:
         description: Form.io json schema zlib compressed and base 64 encoded
         required: true
@@ -48,7 +51,7 @@ jobs:
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
           git add forms translations skjemabygging-formio
-          git commit -m "[publisering] skjema ${{ github.event.inputs.formJsonFileTitle }} og oversettelser, submodule peker til ${{ github.event.inputs.monorepoGitHash }}"
+          git commit -m "[publisering] skjema ${{ github.event.inputs.formDescription || github.event.inputs.formJsonFileTitle }}, monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
         run: git push
       - name: Notify job failure

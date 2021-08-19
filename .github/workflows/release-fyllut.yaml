@@ -1,0 +1,31 @@
+name:  "Release fyllut"
+on:
+  workflow_dispatch:
+    inputs:
+      monorepoGitHash:
+        description: git hash of the monorepo
+        required: true
+jobs:
+  publish:
+    name: "Update reference to monorepo"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.TEAM_ACCESS_TOKEN }}
+      - name: "Git config user email and name"
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "github-actions"
+      - name: "Update submodule"
+        run: git submodule update --init --force
+      - name: "Checkout desired submodule commit"
+        working-directory: skjemabygging-formio
+        run: git checkout ${{ github.event.inputs.monorepoGitHash }}
+      - name: "Commit changes"
+        run: |
+          git add skjemabygging-formio
+          git commit -m "[release-fyllut] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
+      - name: "Push changes"
+        run: git push
