@@ -68,7 +68,7 @@ jobs:
       - name: "Notify job failure"
         if: ${{ github.ref == 'refs/heads/master' && failure() }}
         working-directory: ./skjemabygging-formio/packages/scripts
-        run: cat $GITHUB_EVENT_PATH | dist/trigger-workflow-message.mjs build-aborted
+        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs build-aborted
 
   deploy-fyllut-to-prod:
     name: "Deploy 'fyllut' to prod"
@@ -93,11 +93,11 @@ jobs:
       - name: "Notify job success"
         if: ${{ success() }}
         working-directory: ./skjemabygging-formio/packages/scripts
-        run: cat $GITHUB_EVENT_PATH | dist/trigger-workflow-message.mjs skjemautfyller-deployed
+        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs skjemautfyller-deployed
       - name: "Notify job failure"
         if: ${{ failure() }}
         working-directory: ./skjemabygging-formio/packages/scripts
-        run: cat $GITHUB_EVENT_PATH | dist/trigger-workflow-message.mjs build-aborted
+        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs build-aborted
 
   notify-prod-deployment-failure:
     name: "Notify prod deployment failure"

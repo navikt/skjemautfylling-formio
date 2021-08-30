@@ -58,5 +58,5 @@ jobs:
       - name: Notify job failure
         if: github.ref == 'refs/heads/master' && failure()
         working-directory: ./skjemabygging-formio/packages/scripts
-        run: cat $GITHUB_EVENT_PATH | dist/trigger-workflow-message.mjs publish-aborted
+        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs publish-aborted
 
