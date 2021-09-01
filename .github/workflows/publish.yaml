@@ -33,9 +33,6 @@ jobs:
       - uses: "actions/setup-node@v1"
         with:
           node-version: '14.17.0'
-      - name: "Install deps for notification message"
-        working-directory: ./skjemabygging-formio
-        run: yarn build:scripts
       - name: "Update forms"
         working-directory: forms
         run: echo ${{github.event.inputs.encodedFormJson}} | base64 -d | gzip -d > ${{ github.event.inputs.formJsonFileTitle }}.json
@@ -60,6 +57,8 @@ jobs:
         run: git push
       - name: Notify job failure
         if: github.ref == 'refs/heads/master' && failure()
-        working-directory: ./skjemabygging-formio/packages/scripts
-        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs publish-aborted
+        working-directory: ./skjemabygging-formio
+        run: |
+          yarn && yarn build:scripts
+          cat $GITHUB_EVENT_PATH | node packages/scripts/dist/trigger-workflow-message.mjs publish-aborted
 
