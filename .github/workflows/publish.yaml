@@ -31,7 +31,8 @@ jobs:
         with:
           token: ${{ secrets.TEAM_ACCESS_TOKEN }}
       - name: "Install deps for notification message"
-        run: yarn install
+        working-directory: ./skjemabygging-formio
+        run: yarn build:scripts
       - name: "Update forms"
         working-directory: forms
         run: echo ${{github.event.inputs.encodedFormJson}} | base64 -d | gzip -d > ${{ github.event.inputs.formJsonFileTitle }}.json
@@ -56,5 +57,6 @@ jobs:
         run: git push
       - name: Notify job failure
         if: github.ref == 'refs/heads/master' && failure()
-        run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs publish-aborted
+        working-directory: ./skjemabygging-formio/packages/scripts
+        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs publish-aborted
 

@@ -26,7 +26,8 @@ jobs:
         with:
           node-version: '14.17.0'
       - name: "Install deps for notification message"
-        run: yarn install
+        working-directory: ./skjemabygging-formio
+        run: yarn build:scripts
       - name: "Prepare local dependencies for shared packages"
         working-directory: ./skjemabygging-formio
         run: node bin/prepare-production-build.mjs
@@ -66,7 +67,8 @@ jobs:
           && docker push ${IMAGE}
       - name: "Notify job failure"
         if: ${{ github.ref == 'refs/heads/master' && failure() }}
-        run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs build-aborted
+        working-directory: ./skjemabygging-formio/packages/scripts
+        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs build-aborted
 
   deploy-fyllut-to-prod:
     name: "Deploy 'fyllut' to prod"
@@ -79,7 +81,8 @@ jobs:
         with:
           submodules: true
       - name: "Install deps for notification message"
-        run: yarn install
+        working-directory: ./skjemabygging-formio
+        run: yarn build:scripts
       - name: "Deploy to prod"
         uses: "nais/deploy/actions/deploy@v1"
         env:
@@ -89,10 +92,12 @@ jobs:
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/prod.yaml"
       - name: "Notify job success"
         if: ${{ success() }}
-        run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs skjemautfyller-deployed
+        working-directory: ./skjemabygging-formio/packages/scripts
+        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs skjemautfyller-deployed
       - name: "Notify job failure"
         if: ${{ failure() }}
-        run: cat $GITHUB_EVENT_PATH | bin/trigger-workflow-message.mjs build-aborted
+        working-directory: ./skjemabygging-formio/packages/scripts
+        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs build-aborted
 
   notify-prod-deployment-failure:
     name: "Notify prod deployment failure"
