@@ -53,6 +53,7 @@ jobs:
         run: |
           cp -r ./forms ./skjemabygging-formio/packages/fyllut/temp-forms
           cp -r ./translations ./skjemabygging-formio/packages/fyllut/temp-translations
+          cp -r ./resources ./skjemabygging-formio/packages/fyllut/temp-resources
         working-directory: .
       - name: "Build and publish Docker image"
         working-directory: ./skjemabygging-formio/packages/fyllut
@@ -62,6 +63,7 @@ jobs:
           --build-arg monorepo_git_sha=${{ steps.find-skjemautfylling-formio-sha.outputs.SHA }}
           --build-arg skjema_dir=temp-forms
           --build-arg translation_dir=temp-translations .
+          --build-arg resources_dir=temp-resources .
           && echo ${{ secrets.GITHUB_TOKEN }} | docker login
           --username ${{ github.repository }} --password-stdin https://docker.pkg.github.com
           && docker push ${IMAGE}
