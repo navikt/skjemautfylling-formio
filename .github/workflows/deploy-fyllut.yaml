@@ -62,7 +62,7 @@ jobs:
           --build-arg git_sha=${{ github.sha }}
           --build-arg monorepo_git_sha=${{ steps.find-skjemautfylling-formio-sha.outputs.SHA }}
           --build-arg skjema_dir=temp-forms
-          --build-arg translation_dir=temp-translations .
+          --build-arg translation_dir=temp-translations
           --build-arg resources_dir=temp-resources .
           && echo ${{ secrets.GITHUB_TOKEN }} | docker login
           --username ${{ github.repository }} --password-stdin https://docker.pkg.github.com
