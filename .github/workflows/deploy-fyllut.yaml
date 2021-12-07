@@ -118,10 +118,59 @@ jobs:
           SLACK_FOOTER: "Deploy av fyllut til prod har feilet."
           SLACK_COLOR: failure
 
+  deploy-fyllut-to-dev:
+    name: "Deploy 'fyllut' to dev"
+    if: github.ref == 'refs/heads/labs-deploy'
+    needs: "package-and-push-fyllut"
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: "Deploy to dev"
+        uses: "nais/deploy/actions/deploy@v1"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "dev-gcp"
+          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
+          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev.yaml"
+
+  deploy-fyllut-forhandsvisning-to-dev:
+    name: "Deploy 'fyllut'-forhåndsvisning to dev"
+    if: github.ref == 'refs/heads/labs-deploy'
+    needs: "package-and-push-fyllut"
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: "Deploy to dev"
+        uses: "nais/deploy/actions/deploy@v1"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "dev-gcp"
+          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
+          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-forhandsvisning.yaml"
+
+  notify-dev-deployment-failure:
+    name: "Notify dev deployment failure"
+    if: failure() && github.ref == 'refs/heads/labs-deploy'
+    needs: [deploy-fyllut-to-dev, deploy-fyllut-forhandsvisning-to-dev]
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: "Slack notification"
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_FOOTER: "Deploy av fyllut til dev har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
+          SLACK_COLOR: "#ff9100"
+
   deploy-fyllut-to-labs:
     name: "Deploy 'fyllut' to labs"
     if: github.ref == 'refs/heads/labs-deploy'
-    needs: "package-and-push-fyllut"
+    needs: "deploy-fyllut-to-dev"
     runs-on: "ubuntu-18.04"
     steps:
       - name: Checkout
@@ -139,7 +188,7 @@ jobs:
   deploy-fyllut-forhandsvisning-to-labs:
     name: "Deploy 'fyllut'-forhåndsvisning to labs"
     if: github.ref == 'refs/heads/labs-deploy'
-    needs: "package-and-push-fyllut"
+    needs: "deploy-fyllut-forhandsvisning-to-dev"
     runs-on: "ubuntu-18.04"
     steps:
       - name: Checkout
