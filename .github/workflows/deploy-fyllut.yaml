@@ -11,6 +11,7 @@ env:
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
   PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
 
+concurrency: deploy-${{ github.ref }}
 
 jobs:
   package-and-push-fyllut:
