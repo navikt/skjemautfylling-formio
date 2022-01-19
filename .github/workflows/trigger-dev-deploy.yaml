@@ -1,4 +1,4 @@
-name: 'Trigger labs deploy'
+name: 'Trigger dev deploy'
 on:
   workflow_dispatch:
     inputs:
@@ -7,12 +7,12 @@ on:
         required: true
 jobs:
   publish:
-    name: "Prepare deploy to labs"
+    name: "Prepare deploy to dev"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: labs-deploy
+          ref: dev-deploy
           fetch-depth: 0
           token: ${{ secrets.TEAM_ACCESS_TOKEN }}
       - name: "Git config user email and name"
@@ -29,6 +29,6 @@ jobs:
       - name: "Commit changes"
         run: |
           git add skjemabygging-formio
-          git commit -m "[labs-deploy] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
+          git commit -m "[dev-deploy] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
         run: git push

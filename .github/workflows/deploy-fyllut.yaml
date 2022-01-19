@@ -4,8 +4,9 @@ on:
     branches:
       - master
       - labs-deploy
+      - dev-deploy
 env:
-  IMAGE: "docker.pkg.github.com/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-labs' }}:${{ github.sha }}"
+  IMAGE: "docker.pkg.github.com/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
   PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
   PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
@@ -121,7 +122,7 @@ jobs:
 
   deploy-fyllut-to-dev:
     name: "Deploy 'fyllut' to dev"
-    if: github.ref == 'refs/heads/labs-deploy'
+    if: github.ref == 'refs/heads/dev-deploy' || github.ref == 'refs/heads/labs-deploy'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
@@ -139,7 +140,7 @@ jobs:
 
   deploy-fyllut-forhandsvisning-to-dev:
     name: "Deploy 'fyllut'-forhåndsvisning to dev"
-    if: github.ref == 'refs/heads/labs-deploy'
+    if: github.ref == 'refs/heads/dev-deploy' || github.ref == 'refs/heads/labs-deploy'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
@@ -157,7 +158,7 @@ jobs:
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
-    if: failure() && github.ref == 'refs/heads/labs-deploy'
+    if: failure() && (github.ref == 'refs/heads/dev-deploy' || github.ref == 'refs/heads/labs-deploy')
     needs: [deploy-fyllut-to-dev, deploy-fyllut-forhandsvisning-to-dev]
     runs-on: "ubuntu-18.04"
     steps:
@@ -166,53 +167,4 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_FOOTER: "Deploy av fyllut til dev har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
-          SLACK_COLOR: "#ff9100"
-
-  deploy-fyllut-to-labs:
-    name: "Deploy 'fyllut' to labs"
-    if: github.ref == 'refs/heads/labs-deploy'
-    needs: "deploy-fyllut-to-dev"
-    runs-on: "ubuntu-18.04"
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: "Deploy to labs"
-        uses: "nais/deploy/actions/deploy@v1"
-        env:
-          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
-          "CLUSTER": "labs-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/labs.yaml"
-
-  deploy-fyllut-forhandsvisning-to-labs:
-    name: "Deploy 'fyllut'-forhåndsvisning to labs"
-    if: github.ref == 'refs/heads/labs-deploy'
-    needs: "deploy-fyllut-forhandsvisning-to-dev"
-    runs-on: "ubuntu-18.04"
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: "Deploy to labs"
-        uses: "nais/deploy/actions/deploy@v1"
-        env:
-          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
-          "CLUSTER": "labs-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/labs-forhandsvisning.yaml"
-
-  notify-labs-deployment-failure:
-    name: "Notify labs deployment failure"
-    if: failure() && github.ref == 'refs/heads/labs-deploy'
-    needs: [deploy-fyllut-to-labs, deploy-fyllut-forhandsvisning-to-labs]
-    runs-on: "ubuntu-18.04"
-    steps:
-      - name: "Slack notification"
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_FOOTER: "Deploy av fyllut til labs har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
           SLACK_COLOR: "#ff9100"
