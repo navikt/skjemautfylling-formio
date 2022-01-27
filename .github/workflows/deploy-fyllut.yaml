@@ -30,6 +30,9 @@ jobs:
       - name: "Install deps for notification message"
         working-directory: ./skjemabygging-formio
         run: yarn build:scripts
+      - name: "Install top-level dependencies"
+        working-directory: ./skjemabygging-formio
+        run: yarn install --frozen-lockfile
       - name: "Prepare local dependencies for shared packages"
         working-directory: ./skjemabygging-formio
         run: node bin/prepare-production-build.mjs
