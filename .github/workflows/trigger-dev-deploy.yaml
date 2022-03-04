@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: dev-deploy
+          ref: ${{ github.ref }}
           fetch-depth: 0
           token: ${{ secrets.TEAM_ACCESS_TOKEN }}
       - name: "Git config user email and name"

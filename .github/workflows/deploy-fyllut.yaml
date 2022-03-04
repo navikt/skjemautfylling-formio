@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - master
-      - labs-deploy
       - dev-deploy
+      - experimental-deploy
 env:
   IMAGE: "docker.pkg.github.com/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
   PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
@@ -125,7 +125,7 @@ jobs:
 
   deploy-fyllut-to-dev:
     name: "Deploy 'fyllut' to dev"
-    if: github.ref == 'refs/heads/dev-deploy' || github.ref == 'refs/heads/labs-deploy'
+    if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
@@ -143,7 +143,7 @@ jobs:
 
   deploy-fyllut-forhandsvisning-to-dev:
     name: "Deploy 'fyllut'-forhåndsvisning to dev"
-    if: github.ref == 'refs/heads/dev-deploy' || github.ref == 'refs/heads/labs-deploy'
+    if: github.ref == 'refs/heads/dev-deploy' || github.ref == 'refs/heads/experimental-deploy'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
@@ -157,11 +157,11 @@ jobs:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-forhandsvisning.yaml"
+          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/${{ github.ref == 'refs/heads/dev-deploy' && 'dev-forhandsvisning' || 'dev-experimental' }}.yaml"
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
-    if: failure() && (github.ref == 'refs/heads/dev-deploy' || github.ref == 'refs/heads/labs-deploy')
+    if: failure() && (github.ref == 'refs/heads/dev-deploy')
     needs: [deploy-fyllut-to-dev, deploy-fyllut-forhandsvisning-to-dev]
     runs-on: "ubuntu-18.04"
     steps:
