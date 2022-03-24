@@ -19,16 +19,16 @@ jobs:
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
-      - name: "Fetch latest forms and translations from master"
-        run: git merge origin/master
       - name: "Update submodule"
         run: git submodule update --init --force
+      - name: "Fetch latest forms and translations from master"
+        run: git merge origin/master || git add skjemabygging-formio
       - name: "Checkout desired submodule commit"
         working-directory: skjemabygging-formio
         run: git checkout ${{ github.event.inputs.monorepoGitHash }}
       - name: "Commit changes"
         run: |
           git add skjemabygging-formio
-          git commit -m "[dev-deploy] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
+          git commit -m "[${{ github.ref }}] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
         run: git push
