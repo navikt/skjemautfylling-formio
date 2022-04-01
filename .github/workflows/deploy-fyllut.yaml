@@ -50,6 +50,9 @@ jobs:
       - name: "Backend: install dependencies"
         working-directory: ./skjemabygging-formio/packages/fyllut/server
         run: yarn install --frozen-lockfile
+      - name: "Backend: build"
+        working-directory: ./skjemabygging-formio/packages/fyllut/server
+        run: yarn build || echo "build script does not yet exist, and that is ok"
       - name: "Find SHA for new version"
         working-directory: ./skjemabygging-formio/packages/fyllut
         run: echo ::set-output name=SHA::$(git rev-parse HEAD)
