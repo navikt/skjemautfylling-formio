@@ -144,9 +144,9 @@ jobs:
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev.yaml"
 
-  deploy-fyllut-forhandsvisning-to-dev:
-    name: "Deploy 'fyllut'-forhåndsvisning to dev"
-    if: github.ref == 'refs/heads/dev-deploy' || github.ref == 'refs/heads/experimental-deploy'
+  deploy-fyllut-delingslenke-to-dev:
+    name: "Deploy 'fyllut'-delingslenke to dev"
+    if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
@@ -160,12 +160,30 @@ jobs:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/${{ github.ref == 'refs/heads/dev-deploy' && 'dev-forhandsvisning' || 'dev-experimental' }}.yaml"
+          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-delingslenke.yaml"
+
+  deploy-fyllut-experimental-to-dev:
+    name: "Deploy 'fyllut'-experimental to dev"
+    if: github.ref == 'refs/heads/experimental-deploy'
+    needs: "package-and-push-fyllut"
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: "Deploy to dev"
+        uses: "nais/deploy/actions/deploy@v1"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "dev-gcp"
+          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
+          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-experimental.yaml"
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
     if: failure() && (github.ref == 'refs/heads/dev-deploy')
-    needs: [deploy-fyllut-to-dev, deploy-fyllut-forhandsvisning-to-dev]
+    needs: [deploy-fyllut-to-dev, deploy-fyllut-delingslenke-to-dev]
     runs-on: "ubuntu-18.04"
     steps:
       - name: "Slack notification"
