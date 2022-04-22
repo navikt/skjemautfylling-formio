@@ -162,6 +162,24 @@ jobs:
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-delingslenke.yaml"
 
+  deploy-fyllut-forhandsvisning-to-dev:
+    name: "Deploy 'fyllut'-forhåndsvisning to dev"
+    if: github.ref == 'refs/heads/dev-deploy'
+    needs: "package-and-push-fyllut"
+    runs-on: "ubuntu-18.04"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: "Deploy to dev"
+        uses: "nais/deploy/actions/deploy@v1"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "dev-gcp"
+          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
+          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-forhandsvisning.yaml"
+
   deploy-fyllut-experimental-to-dev:
     name: "Deploy 'fyllut'-experimental to dev"
     if: github.ref == 'refs/heads/experimental-deploy'
