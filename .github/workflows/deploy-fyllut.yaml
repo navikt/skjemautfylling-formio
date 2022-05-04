@@ -161,6 +161,12 @@ jobs:
           "CLUSTER": "dev-gcp"
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-delingslenke.yaml"
+      - name: "Deploy forhandsvisning -> delingslenke redirect-ingress"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "dev-gcp"
+          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/dev-forhandsvisning-redirect.yaml"
+        uses: "nais/deploy/actions/deploy@v1"
 
   deploy-fyllut-experimental-to-dev:
     name: "Deploy 'fyllut'-experimental to dev"
