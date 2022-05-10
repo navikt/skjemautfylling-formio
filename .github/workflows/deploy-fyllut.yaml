@@ -47,12 +47,9 @@ jobs:
         run: yarn install --frozen-lockfile && yarn build:prod
         env:
           REACT_APP_GIT_VERSION: ${{ github.sha }}
-      - name: "Backend: install dependencies"
+      - name: "Backend: install dependencies and build"
         working-directory: ./skjemabygging-formio/packages/fyllut/server
-        run: yarn install --frozen-lockfile
-      - name: "Backend: build"
-        working-directory: ./skjemabygging-formio/packages/fyllut/server
-        run: yarn build || echo "build script does not yet exist, and that is ok"
+        run: yarn install --frozen-lockfile && yarn build
       - name: "Find SHA for new version"
         working-directory: ./skjemabygging-formio/packages/fyllut
         run: echo ::set-output name=SHA::$(git rev-parse HEAD)
