@@ -143,6 +143,7 @@ jobs:
           "CLUSTER": "dev-gcp"
           "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
           "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev.yaml"
+          "TIMEOUT": "25m"
 
   deploy-fyllut-delingslenke-to-dev:
     name: "Deploy 'fyllut'-delingslenke to dev"
