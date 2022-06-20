@@ -6,7 +6,7 @@ on:
       - dev-deploy
       - experimental-deploy
 env:
-  IMAGE: "docker.pkg.github.com/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
+  IMAGE: "ghcr.io/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
   PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
   PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
@@ -73,7 +73,7 @@ jobs:
           --build-arg translation_dir=temp-translations
           --build-arg resources_dir=temp-resources .
           && echo ${{ secrets.GITHUB_TOKEN }} | docker login
-          --username ${{ github.repository }} --password-stdin https://docker.pkg.github.com
+          --username ${{ github.repository }} --password-stdin https://ghcr.io
           && docker push ${IMAGE}
       - name: "Notify job failure"
         if: ${{ github.ref == 'refs/heads/master' && failure() }}
