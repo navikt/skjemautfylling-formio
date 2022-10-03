@@ -24,7 +24,7 @@ jobs:
           submodules: true
       - uses: "actions/setup-node@v1"
         with:
-          node-version: '14.17.0'
+          node-version: '16.17.1'
       - name: "Install deps for notification message"
         working-directory: ./skjemabygging-formio
         run: yarn build:scripts
@@ -64,7 +64,7 @@ jobs:
           submodules: true
       - uses: "actions/setup-node@v1"
         with:
-          node-version: '14.17.0'
+          node-version: '16.17.1'
       - name: "Deploy to prod"
         uses: "nais/deploy/actions/deploy@v1"
         env:
