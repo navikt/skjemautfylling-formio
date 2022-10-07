@@ -26,8 +26,10 @@ jobs:
       - name: "Checkout desired submodule commit"
         working-directory: skjemabygging-formio
         run: git checkout ${{ github.event.inputs.monorepoGitHash }}
+      - name: "Overwrite MONOREPO"
+        run: echo -n ${{ github.event.inputs.monorepoGitHash }} > MONOREPO
       - name: "Add submodule"
-        run: git add skjemabygging-formio
+        run: git add skjemabygging-formio MONOREPO
       - name: "No unstaged changes should exist, quit otherwise"
         run: git diff --quiet
       - name: "Commit changes"

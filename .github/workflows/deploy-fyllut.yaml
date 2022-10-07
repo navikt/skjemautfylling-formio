@@ -2,11 +2,10 @@ name: "Deploy 'fyllut'"
 on:
   push:
     branches:
-      - master
-      - dev-deploy
-      - experimental-deploy
+      - experimental-test
 env:
   IMAGE: "ghcr.io/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
+  IMAGE_FYLLUT_BASE: "ghcr.io/navikt/skjemabygging-formio/${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
   PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
   PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
@@ -17,7 +16,6 @@ concurrency: deploy-${{ github.ref }}
 jobs:
   package-and-push-fyllut:
     name: "Package 'fyllut'"
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,47 +28,24 @@ jobs:
       - name: "Install deps for notification message"
         working-directory: ./skjemabygging-formio
         run: yarn build:scripts
-      - name: "Install top-level dependencies"
-        working-directory: ./skjemabygging-formio
-        run: yarn install --frozen-lockfile
-      - name: "Prepare local dependencies for shared packages"
-        working-directory: ./skjemabygging-formio
-        run: node bin/prepare-production-build.mjs
-      - name: "Build shared-domain"
-        working-directory: ./skjemabygging-formio/packages/shared-domain
-        run: yarn install --frozen-lockfile && yarn build
-      - name: "Build shared-components"
-        working-directory: ./skjemabygging-formio/packages/shared-components
-        run: yarn install --frozen-lockfile && yarn build
-      - name: "Frontend: install dependencies and build"
-        working-directory: ./skjemabygging-formio/packages/fyllut
-        run: yarn install --frozen-lockfile && yarn build:prod
-        env:
-          REACT_APP_GIT_VERSION: ${{ github.sha }}
-      - name: "Backend: install dependencies and build"
-        working-directory: ./skjemabygging-formio/packages/fyllut/server
-        run: yarn install --frozen-lockfile && yarn build
-      - name: "Find SHA for new version"
-        working-directory: ./skjemabygging-formio/packages/fyllut
-        run: echo ::set-output name=SHA::$(git rev-parse HEAD)
-        id: find-skjemautfylling-formio-sha
-      - name: "Copy forms and translations into docker build context"
-        run: |
-          cp -r ./forms ./skjemabygging-formio/packages/fyllut/temp-forms
-          cp -r ./translations ./skjemabygging-formio/packages/fyllut/temp-translations
-          cp -r ./resources ./skjemabygging-formio/packages/fyllut/temp-resources
-        working-directory: .
+      - name: Read monorepo commit sha
+        id: monorepo
+        run: echo ::set-output name=sha::$(cat MONOREPO)
+      - name: Login to GitHub Package Repository
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: "Build and publish Docker image"
-        working-directory: ./skjemabygging-formio/packages/fyllut
         run: >
           docker build --pull --tag ${IMAGE}
+          --build-arg image_fyllut_base=${IMAGE_FYLLUT_BASE}
           --build-arg git_sha=${{ github.sha }}
-          --build-arg monorepo_git_sha=${{ steps.find-skjemautfylling-formio-sha.outputs.SHA }}
-          --build-arg skjema_dir=temp-forms
-          --build-arg translation_dir=temp-translations
-          --build-arg resources_dir=temp-resources .
-          && echo ${{ secrets.GITHUB_TOKEN }} | docker login
-          --username ${{ github.repository }} --password-stdin https://ghcr.io
+          --build-arg monorepo_git_sha=${{ steps.monorepo.outputs.sha }}
+          --build-arg skjema_dir=forms
+          --build-arg translation_dir=translations
+          --build-arg resources_dir=resources .
           && docker push ${IMAGE}
       - name: "Notify job failure"
         if: ${{ github.ref == 'refs/heads/master' && failure() }}
@@ -167,7 +142,7 @@ jobs:
 
   deploy-fyllut-experimental-to-dev:
     name: "Deploy 'fyllut'-experimental to dev"
-    if: github.ref == 'refs/heads/experimental-deploy'
+    if: github.ref == 'refs/heads/experimental-test'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:

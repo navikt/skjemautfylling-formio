@@ -23,9 +23,11 @@ jobs:
       - name: "Checkout desired submodule commit"
         working-directory: skjemabygging-formio
         run: git checkout ${{ github.event.inputs.monorepoGitHash }}
+      - name: "Overwrite MONOREPO"
+        run: echo -n ${{ github.event.inputs.monorepoGitHash }} > MONOREPO
       - name: "Commit changes"
         run: |
-          git add skjemabygging-formio
+          git add skjemabygging-formio MONOREPO
           git commit -m "[release-fyllut] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
         run: git push
