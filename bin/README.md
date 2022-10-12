@@ -1,5 +1,7 @@
 # Hvordan teste notifyDeploy.mjs fra lokal maskin
 
+Kjør yarn på toppnivå for å installere avhengigheter.
+
 Opprett en .env fil i denne mappen:
 
     PUSHER_APP_SECRET=<pusher-app-secret>

@@ -8,10 +8,9 @@ on:
 env:
   IMAGE: "ghcr.io/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
   IMAGE_FYLLUT_BASE: "ghcr.io/navikt/skjemabygging-formio/${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
-  PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
-  PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
+  MONOREPO_BASE_URL: "https://raw.githubusercontent.com/navikt/skjemabygging-formio"
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
-  PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
+  BYGGER_URL: "https://skjemabygging.nav.no"
 
 concurrency: deploy-${{ github.ref }}
 
@@ -21,15 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - uses: "actions/setup-node@v1"
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
         with:
           node-version: '16.17.1'
-      - name: "Install deps for notification message"
-        working-directory: ./skjemabygging-formio
-        run: yarn build:scripts
       - name: Read monorepo commit sha
         id: monorepo
         run: echo ::set-output name=sha::$(cat MONOREPO)
@@ -51,8 +45,7 @@ jobs:
           && docker push ${IMAGE}
       - name: "Notify job failure"
         if: ${{ github.ref == 'refs/heads/master' && failure() }}
-        working-directory: ./skjemabygging-formio/packages/scripts
-        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs build-aborted
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs failure
 
   deploy-fyllut-to-prod:
     name: "Deploy 'fyllut' to prod"
@@ -61,31 +54,25 @@ jobs:
     runs-on: "ubuntu-18.04"
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - uses: "actions/setup-node@v1"
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
         with:
           node-version: '16.17.1'
+      - name: Fetch NAIS config
+        run: bin/fetchNaisConfig.sh prod fyllut-config
       - name: "Deploy to prod"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "prod-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/prod.yaml"
+          "RESOURCE": "./fyllut-config/config.yaml"
+          "VARS": "./fyllut-config/prod.yaml"
       - name: "Notify job success"
         if: ${{ success() }}
-        working-directory: ./skjemabygging-formio
-        run: |
-          yarn && yarn build:scripts
-          cat $GITHUB_EVENT_PATH | node packages/scripts/dist/trigger-workflow-message.mjs skjemautfyller-deployed
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs success
       - name: "Notify job failure"
         if: ${{ failure() }}
-        working-directory: ./skjemabygging-formio
-        run: |
-          yarn && yarn build:scripts
-          cat $GITHUB_EVENT_PATH | node packages/scripts/dist/trigger-workflow-message.mjs build-aborted
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs failure
 
   notify-prod-deployment-failure:
     name: "Notify prod deployment failure"
@@ -107,16 +94,16 @@ jobs:
     runs-on: "ubuntu-18.04"
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
+        uses: actions/checkout@v3
+      - name: Fetch NAIS config
+        run: bin/fetchNaisConfig.sh dev fyllut-config
       - name: "Deploy to dev"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev.yaml"
+          "RESOURCE": "./fyllut-config/config.yaml"
+          "VARS": "./fyllut-config/dev.yaml"
 
   deploy-fyllut-delingslenke-to-dev:
     name: "Deploy 'fyllut'-delingslenke to dev"
@@ -125,21 +112,23 @@ jobs:
     runs-on: "ubuntu-18.04"
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
+        uses: actions/checkout@v3
+      - name: Fetch NAIS config
+        run: bin/fetchNaisConfig.sh dev-delingslenke fyllut-config
       - name: "Deploy to dev"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-delingslenke.yaml"
+          "RESOURCE": "./fyllut-config/config.yaml"
+          "VARS": "./fyllut-config/dev-delingslenke.yaml"
+      - name: Fetch NAIS config for redirect ingress
+        run: bin/fetchNaisConfig.sh dev-forhandsvisning-redirect redirect-config
       - name: "Deploy forhandsvisning -> delingslenke redirect-ingress"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/dev-forhandsvisning-redirect.yaml"
+          "RESOURCE": "./redirect-config/dev-forhandsvisning-redirect.yaml"
         uses: "nais/deploy/actions/deploy@v1"
 
   deploy-fyllut-experimental-to-dev:
@@ -149,16 +138,16 @@ jobs:
     runs-on: "ubuntu-18.04"
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: "Deploy to dev"
+        uses: actions/checkout@v3
+      - name: Fetch NAIS config
+        run: bin/fetchNaisConfig.sh dev-experimental fyllut-config
+      - name: "Deploy to dev-experimental"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-experimental.yaml"
+          "RESOURCE": "./fyllut-config/config.yaml"
+          "VARS": "./fyllut-config/dev-experimental.yaml"
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
