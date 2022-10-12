@@ -23,7 +23,7 @@ jobs:
       - name: "Checkout desired submodule commit"
         working-directory: skjemabygging-formio
         run: git checkout ${{ github.event.inputs.monorepoGitHash }}
-      - name: "Overwrite MONOREPO"
+      - name: "Update MONOREPO reference"
         run: echo -n ${{ github.event.inputs.monorepoGitHash }} > MONOREPO
       - name: "Commit changes"
         run: |
