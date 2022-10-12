@@ -1,0 +1,15 @@
+name: Build scripts
+on:
+  push:
+    paths:
+      - 'bin/notifyDeploy.mjs'
+      - 'package.json'
+jobs:
+  build:
+    name: Install dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: yarn
