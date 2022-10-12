@@ -4,16 +4,11 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "dotenv": "^10.0.0",
-    "husky": "^3.1.0",
-    "lint-staged": "^10.4.0",
-    "prettier": "^2.0.5",
-    "eslint": "^6.6.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "dotenv": "^16.0.3",
+    "eslint": "^8.25.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
   },
   "lint-staged": {
     "*.{js,jsx,cjs,mjs}": [
@@ -23,5 +18,12 @@
     "*.{md,mdx}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "axios": "^1.1.2"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint:staged": "lint-staged"
   }
 }
