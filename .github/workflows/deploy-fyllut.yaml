@@ -2,7 +2,9 @@ name: "Deploy 'fyllut'"
 on:
   push:
     branches:
-      - experimental-test
+      - master
+      - dev-deploy
+      - experimental-deploy
 env:
   IMAGE: "ghcr.io/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
   IMAGE_FYLLUT_BASE: "ghcr.io/navikt/skjemabygging-formio/${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
@@ -142,7 +144,7 @@ jobs:
 
   deploy-fyllut-experimental-to-dev:
     name: "Deploy 'fyllut'-experimental to dev"
-    if: github.ref == 'refs/heads/experimental-test'
+    if: github.ref == 'refs/heads/experimental-deploy'
     needs: "package-and-push-fyllut"
     runs-on: "ubuntu-18.04"
     steps:
