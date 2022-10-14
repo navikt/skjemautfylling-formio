@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from "fs";
-import { createHash } from "crypto";
+import bcrypt from "bcrypt";
 import axios from "axios";
 import dotenv from "dotenv";
 
@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== "test") {
   dotenv.config();
 }
 
-const hash = (password) => createHash("sha256").update(password).digest("hex");
+const hash = (password) => bcrypt.hashSync(password, 10);
 
 const getEnv = (key) => {
   const appValue = process.env[key];
