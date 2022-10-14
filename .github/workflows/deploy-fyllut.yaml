@@ -7,114 +7,77 @@ on:
       - experimental-deploy
 env:
   IMAGE: "ghcr.io/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
-  PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
-  PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
+  IMAGE_FYLLUT_BASE: "ghcr.io/navikt/skjemabygging-formio/${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
+  MONOREPO_BASE_URL: "https://raw.githubusercontent.com/navikt/skjemabygging-formio"
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
-  PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
+  BYGGER_URL: "https://skjemabygging.nav.no"
 
 concurrency: deploy-${{ github.ref }}
 
 jobs:
   package-and-push-fyllut:
     name: "Package 'fyllut'"
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - uses: "actions/setup-node@v1"
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
         with:
           node-version: '16.17.1'
-      - name: "Install deps for notification message"
-        working-directory: ./skjemabygging-formio
-        run: yarn build:scripts
-      - name: "Install top-level dependencies"
-        working-directory: ./skjemabygging-formio
-        run: yarn install --frozen-lockfile
-      - name: "Prepare local dependencies for shared packages"
-        working-directory: ./skjemabygging-formio
-        run: node bin/prepare-production-build.mjs
-      - name: "Build shared-domain"
-        working-directory: ./skjemabygging-formio/packages/shared-domain
-        run: yarn install --frozen-lockfile && yarn build
-      - name: "Build shared-components"
-        working-directory: ./skjemabygging-formio/packages/shared-components
-        run: yarn install --frozen-lockfile && yarn build
-      - name: "Frontend: install dependencies and build"
-        working-directory: ./skjemabygging-formio/packages/fyllut
-        run: yarn install --frozen-lockfile && yarn build:prod
-        env:
-          REACT_APP_GIT_VERSION: ${{ github.sha }}
-      - name: "Backend: install dependencies and build"
-        working-directory: ./skjemabygging-formio/packages/fyllut/server
-        run: yarn install --frozen-lockfile && yarn build
-      - name: "Find SHA for new version"
-        working-directory: ./skjemabygging-formio/packages/fyllut
-        run: echo ::set-output name=SHA::$(git rev-parse HEAD)
-        id: find-skjemautfylling-formio-sha
-      - name: "Copy forms and translations into docker build context"
-        run: |
-          cp -r ./forms ./skjemabygging-formio/packages/fyllut/temp-forms
-          cp -r ./translations ./skjemabygging-formio/packages/fyllut/temp-translations
-          cp -r ./resources ./skjemabygging-formio/packages/fyllut/temp-resources
-        working-directory: .
+      - name: Read monorepo commit sha
+        run: echo "MONOREPO_GIT_SHA=$(cat MONOREPO)" >> $GITHUB_ENV
+      - name: Login to GitHub Package Repository
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: "Build and publish Docker image"
-        working-directory: ./skjemabygging-formio/packages/fyllut
         run: >
           docker build --pull --tag ${IMAGE}
+          --build-arg image_fyllut_base=${IMAGE_FYLLUT_BASE}
           --build-arg git_sha=${{ github.sha }}
-          --build-arg monorepo_git_sha=${{ steps.find-skjemautfylling-formio-sha.outputs.SHA }}
-          --build-arg skjema_dir=temp-forms
-          --build-arg translation_dir=temp-translations
-          --build-arg resources_dir=temp-resources .
-          && echo ${{ secrets.GITHUB_TOKEN }} | docker login
-          --username ${{ github.repository }} --password-stdin https://ghcr.io
+          --build-arg monorepo_git_sha=${{ env.MONOREPO_GIT_SHA }}
+          --build-arg skjema_dir=forms
+          --build-arg translation_dir=translations
+          --build-arg resources_dir=resources .
           && docker push ${IMAGE}
       - name: "Notify job failure"
         if: ${{ github.ref == 'refs/heads/master' && failure() }}
-        working-directory: ./skjemabygging-formio/packages/scripts
-        run: cat $GITHUB_EVENT_PATH | node dist/trigger-workflow-message.mjs build-aborted
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs failure
 
   deploy-fyllut-to-prod:
     name: "Deploy 'fyllut' to prod"
     if: github.ref == 'refs/heads/master'
     needs: "package-and-push-fyllut"
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - uses: "actions/setup-node@v1"
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
         with:
           node-version: '16.17.1'
+      - name: Fetch NAIS config
+        run: bin/fetchNaisConfig.sh prod fyllut-config
       - name: "Deploy to prod"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "prod-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/prod.yaml"
+          "RESOURCE": "./fyllut-config/config.yaml"
+          "VARS": "./fyllut-config/prod.yaml"
       - name: "Notify job success"
         if: ${{ success() }}
-        working-directory: ./skjemabygging-formio
-        run: |
-          yarn && yarn build:scripts
-          cat $GITHUB_EVENT_PATH | node packages/scripts/dist/trigger-workflow-message.mjs skjemautfyller-deployed
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs success
       - name: "Notify job failure"
         if: ${{ failure() }}
-        working-directory: ./skjemabygging-formio
-        run: |
-          yarn && yarn build:scripts
-          cat $GITHUB_EVENT_PATH | node packages/scripts/dist/trigger-workflow-message.mjs build-aborted
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs failure
 
   notify-prod-deployment-failure:
     name: "Notify prod deployment failure"
     if: failure() && github.ref == 'refs/heads/master'
     needs: deploy-fyllut-to-prod
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: "Slack notification"
         uses: rtCamp/action-slack-notify@v2
@@ -127,67 +90,69 @@ jobs:
     name: "Deploy 'fyllut' to dev"
     if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
+        uses: actions/checkout@v3
+      - name: Fetch NAIS config
+        run: bin/fetchNaisConfig.sh dev fyllut-config
       - name: "Deploy to dev"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev.yaml"
+          "RESOURCE": "./fyllut-config/config.yaml"
+          "VARS": "./fyllut-config/dev.yaml"
 
   deploy-fyllut-delingslenke-to-dev:
     name: "Deploy 'fyllut'-delingslenke to dev"
     if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
+        uses: actions/checkout@v3
+      - name: Fetch NAIS config
+        run: bin/fetchNaisConfig.sh dev-delingslenke fyllut-config
       - name: "Deploy to dev"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-delingslenke.yaml"
+          "RESOURCE": "./fyllut-config/config.yaml"
+          "VARS": "./fyllut-config/dev-delingslenke.yaml"
+      - name: Fetch NAIS config for redirect ingress
+        run: bin/fetchNaisConfig.sh dev-forhandsvisning-redirect redirect-config
       - name: "Deploy forhandsvisning -> delingslenke redirect-ingress"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/dev-forhandsvisning-redirect.yaml"
+          "RESOURCE": "./redirect-config/dev-forhandsvisning-redirect.yaml"
         uses: "nais/deploy/actions/deploy@v1"
 
   deploy-fyllut-experimental-to-dev:
     name: "Deploy 'fyllut'-experimental to dev"
     if: github.ref == 'refs/heads/experimental-deploy'
     needs: "package-and-push-fyllut"
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: "Deploy to dev"
+        uses: actions/checkout@v3
+      - name: Fetch NAIS config
+        run: bin/fetchNaisConfig.sh dev-experimental fyllut-config
+      - name: "Deploy to dev-experimental"
         uses: "nais/deploy/actions/deploy@v1"
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": "./skjemabygging-formio/packages/fyllut/.nais/config.yaml"
-          "VARS": "./skjemabygging-formio/packages/fyllut/.nais/dev-experimental.yaml"
+          "RESOURCE": "./fyllut-config/config.yaml"
+          "VARS": "./fyllut-config/dev-experimental.yaml"
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
     if: failure() && (github.ref == 'refs/heads/dev-deploy')
     needs: [deploy-fyllut-to-dev, deploy-fyllut-delingslenke-to-dev]
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: "Slack notification"
         uses: rtCamp/action-slack-notify@v2
