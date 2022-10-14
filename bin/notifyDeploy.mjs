@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from "fs";
 import bcrypt from "bcrypt";
-import axios from "axios";
+import fetch from "node-fetch";
 import dotenv from "dotenv";
 
 if (process.env.NODE_ENV !== "test") {
@@ -31,21 +31,28 @@ const byggerUrl = getEnv("BYGGER_URL");
 const stdinContent = fs.readFileSync(0, "utf-8");
 const githubEventMessage = JSON.parse(stdinContent);
 
+const isJson = (response) => response.headers.get("content-type").includes("application/json");
+
 (async () => {
   try {
-    await axios.post(
-      `${byggerUrl}/notifications`,
-      {
+    const response = await fetch(`${byggerUrl}/notifications`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "Bygger-Pusher-Secret-Hash": `${hash(pusherSecret)}`,
+      },
+      body: JSON.stringify({
         type: eventType,
         githubEventMessage,
-      },
-      {
-        headers: {
-          "Bygger-Pusher-Secret-Hash": `${hash(pusherSecret)}`,
-        },
-      }
-    );
-    console.log(`Notified bygger: ${eventType}`);
+      }),
+    });
+    if (response.ok) {
+      console.log(`Notified bygger: ${eventType}`);
+    } else {
+      const body = isJson(response) ? await response.json() : await response.text();
+      console.error(`Failed to notify bygger: ${response.status} ${JSON.stringify(body)}`);
+      process.exit(1);
+    }
   } catch (e) {
     console.error(`Failed to notify bygger: ${e.message}`);
     process.exit(1);
