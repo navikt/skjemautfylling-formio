@@ -31,8 +31,6 @@ const byggerUrl = getEnv("BYGGER_URL");
 const stdinContent = fs.readFileSync(0, "utf-8");
 const githubEventMessage = JSON.parse(stdinContent);
 
-const isJson = (response) => response.headers.get("content-type").includes("application/json");
-
 (async () => {
   try {
     const response = await fetch(`${byggerUrl}/notifications`, {
@@ -49,8 +47,8 @@ const isJson = (response) => response.headers.get("content-type").includes("appl
     if (response.ok) {
       console.log(`Notified bygger: ${eventType}`);
     } else {
-      const body = isJson(response) ? await response.json() : await response.text();
-      console.error(`Failed to notify bygger: ${response.status} ${JSON.stringify(body)}`);
+      const body = await response.text();
+      console.error(`Failed to notify bygger: ${response.status} ${body}`);
       process.exit(1);
     }
   } catch (e) {
