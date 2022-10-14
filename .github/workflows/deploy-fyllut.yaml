@@ -50,7 +50,7 @@ jobs:
     name: "Deploy 'fyllut' to prod"
     if: github.ref == 'refs/heads/master'
     needs: "package-and-push-fyllut"
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -77,7 +77,7 @@ jobs:
     name: "Notify prod deployment failure"
     if: failure() && github.ref == 'refs/heads/master'
     needs: deploy-fyllut-to-prod
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: "Slack notification"
         uses: rtCamp/action-slack-notify@v2
@@ -90,7 +90,7 @@ jobs:
     name: "Deploy 'fyllut' to dev"
     if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -108,7 +108,7 @@ jobs:
     name: "Deploy 'fyllut'-delingslenke to dev"
     if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -134,7 +134,7 @@ jobs:
     name: "Deploy 'fyllut'-experimental to dev"
     if: github.ref == 'refs/heads/experimental-deploy'
     needs: "package-and-push-fyllut"
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -152,7 +152,7 @@ jobs:
     name: "Notify dev deployment failure"
     if: failure() && (github.ref == 'refs/heads/dev-deploy')
     needs: [deploy-fyllut-to-dev, deploy-fyllut-delingslenke-to-dev]
-    runs-on: "ubuntu-18.04"
+    runs-on: ubuntu-latest
     steps:
       - name: "Slack notification"
         uses: rtCamp/action-slack-notify@v2
