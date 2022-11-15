@@ -9,10 +9,7 @@ env:
   IMAGE: "ghcr.io/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
   IMAGE_FYLLUT_BASE: "ghcr.io/navikt/skjemabygging-formio/${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
   MONOREPO_BASE_URL: "https://raw.githubusercontent.com/navikt/skjemabygging-formio"
-  PUSHER_APP_ID: ${{ secrets.PUSHER_APP_ID }}
-  PUSHER_APP_KEY: ${{ secrets.PUSHER_APP_KEY }}
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
-  PUSHER_APP_CLUSTER: ${{ secrets.PUSHER_APP_CLUSTER }}
   BYGGER_URL: "https://skjemabygging.nav.no"
 
 concurrency: deploy-${{ github.ref }}
@@ -24,8 +21,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          submodules: true
       - uses: actions/setup-node@v2
         with:
           node-version: '16.17.1'
@@ -49,10 +44,7 @@ jobs:
           && docker push ${IMAGE}
       - name: "Notify job failure"
         if: ${{ github.ref == 'refs/heads/master' && failure() }}
-        working-directory: ./skjemabygging-formio
-        run: |
-          yarn && yarn build:scripts
-          cat $GITHUB_EVENT_PATH | node packages/scripts/dist/trigger-workflow-message.mjs build-aborted
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs failure
 
   deploy-fyllut-to-prod:
     name: "Deploy 'fyllut' to prod"
@@ -62,8 +54,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          submodules: true
       - uses: actions/setup-node@v2
         with:
           node-version: '16.17.1'
@@ -78,16 +68,10 @@ jobs:
           "VARS": "./fyllut-config/prod.yaml"
       - name: "Notify job success"
         if: ${{ success() }}
-        working-directory: ./skjemabygging-formio
-        run: |
-          yarn && yarn build:scripts
-          cat $GITHUB_EVENT_PATH | node packages/scripts/dist/trigger-workflow-message.mjs skjemautfyller-deployed
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs success
       - name: "Notify job failure"
         if: ${{ failure() }}
-        working-directory: ./skjemabygging-formio
-        run: |
-          yarn && yarn build:scripts
-          cat $GITHUB_EVENT_PATH | node packages/scripts/dist/trigger-workflow-message.mjs build-aborted
+        run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs failure
 
   notify-prod-deployment-failure:
     name: "Notify prod deployment failure"
