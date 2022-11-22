@@ -1,20 +1,14 @@
 # skjemautfylling-formio
 
-Her ligger publiserte skjemadefinisjoner i mappen `forms`, og de pakkes sammen med applikasjonen `fyllut`
-som hentes vha. git submodul [skjemabygging-formio](https://github.com/navikt/skjemabygging-formio), og deployes
-til produksjon.
+Her finner du:
 
-# Komme i gang
+-   publiserte skjemadefinisjoner i mappen `forms`
+-   publiserte oversettelser i mappen `translations`
+-   publiserte ressurser i mappen `resources`
+-   git sha i filen MONOREPO som er versjonen til tilhørende `fyllut-base` docker image
 
-For at filene i git submodulen `skjemabygging-formio` skal hentes må følgende kommando kjøres på rotnivå i
-dette repo'et:
-
-```
-git submodule update --init
-```
-
-:warning: Innholdet i mappen `skjemabygging-formio` skal ikke endres herfra. Sjekk ut
-[skjemabygging-formio](https://github.com/navikt/skjemabygging-formio) for å gjøre kodeendringer i selve applikasjonen.
+Dette bygges sammen til applikasjonen FyllUt, og deployes til `prod-gcp` når en skjemabygger
+publiserer en endring.
 
 # Henvendelser
 
