@@ -19,15 +19,12 @@ jobs:
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
-      - name: "Update submodule"
-        run: git submodule update --init --force
-      - name: "Fetch latest forms and translations from master, ignore merge conflicts due to submodule"
-        run: git merge origin/master || git add skjemabygging-formio
-      - name: "Checkout desired submodule commit"
-        working-directory: skjemabygging-formio
-        run: git checkout ${{ github.event.inputs.monorepoGitHash }}
-      - name: "Add submodule"
-        run: git add skjemabygging-formio
+      - name: "Fetch latest forms and translations from master"
+        run: git merge origin/master
+      - name: "Update MONOREPO reference"
+        run: echo -n ${{ github.event.inputs.monorepoGitHash }} > MONOREPO
+      - name: "Add MONOREPO"
+        run: git add MONOREPO
       - name: "No unstaged changes should exist, quit otherwise"
         run: git diff --quiet
       - name: "Commit changes"
