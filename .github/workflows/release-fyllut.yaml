@@ -18,16 +18,11 @@ jobs:
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
-      - name: "Update submodule"
-        run: git submodule update --init --force
-      - name: "Checkout desired submodule commit"
-        working-directory: skjemabygging-formio
-        run: git checkout ${{ github.event.inputs.monorepoGitHash }}
       - name: "Update MONOREPO reference"
         run: echo -n ${{ github.event.inputs.monorepoGitHash }} > MONOREPO
       - name: "Commit changes"
         run: |
-          git add skjemabygging-formio MONOREPO
+          git add MONOREPO
           git commit -m "[release-fyllut] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
       - name: "Push changes"
         run: git push
