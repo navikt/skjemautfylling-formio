@@ -19,8 +19,8 @@ jobs:
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
-      - name: "Fetch latest forms and translations from master"
-        run: git merge origin/master
+      - name: "Fetch latest forms and translations from master, ignore merge conflicts due to monorepo reference"
+        run: git merge origin/master || git add MONOREPO
       - name: "Update MONOREPO reference"
         run: echo -n ${{ github.event.inputs.monorepoGitHash }} > MONOREPO
       - name: "Add MONOREPO"
