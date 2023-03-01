@@ -121,14 +121,6 @@ jobs:
           "CLUSTER": "dev-gcp"
           "RESOURCE": "./fyllut-config/config.yaml"
           "VARS": "./fyllut-config/dev-delingslenke.yaml"
-      - name: Fetch NAIS config for redirect ingress
-        run: bin/fetchNaisConfig.sh dev-forhandsvisning-redirect redirect-config
-      - name: "Deploy forhandsvisning -> delingslenke redirect-ingress"
-        env:
-          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
-          "CLUSTER": "dev-gcp"
-          "RESOURCE": "./redirect-config/dev-forhandsvisning-redirect.yaml"
-        uses: "nais/deploy/actions/deploy@v1"
 
   deploy-fyllut-experimental-to-dev:
     name: "Deploy 'fyllut'-experimental to dev"
