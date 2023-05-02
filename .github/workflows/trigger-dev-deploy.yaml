@@ -1,10 +1,5 @@
-name: 'Trigger dev deploy'
-on:
-  workflow_dispatch:
-    inputs:
-      monorepoGitHash:
-        description: git hash of the monorepo
-        required: true
+name: "Trigger dev deploy"
+on: push
 jobs:
   publish:
     name: "Prepare deploy to dev"
@@ -14,7 +9,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
-          token: ${{ secrets.TEAM_ACCESS_TOKEN }}
+          token: ${{ secrets.SKJEMADIGITALISERING_WORKFLOW_TOKEN }}
       - name: "Git config user email and name"
         run: |
           git config --local user.email "github-actions@github.com"
@@ -22,13 +17,13 @@ jobs:
       - name: "Fetch latest forms and translations from master, ignore merge conflicts due to monorepo reference"
         run: git merge origin/master || git add MONOREPO
       - name: "Update MONOREPO reference"
-        run: echo -n ${{ github.event.inputs.monorepoGitHash }} > MONOREPO
+        run: echo -n 49cb847c964b34b2027d42a5cc6efcfa534d171f > MONOREPO
       - name: "Add MONOREPO"
         run: git add MONOREPO
       - name: "No unstaged changes should exist, quit otherwise"
         run: git diff --quiet
       - name: "Commit changes"
         run: |
-          git commit -m "[${{ github.ref }}] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
+          git commit -m "[${{ github.ref }}] monorepo ref: 49cb847c964b34b2027d42a5cc6efcfa534d171f"
       - name: "Push changes"
         run: git push
