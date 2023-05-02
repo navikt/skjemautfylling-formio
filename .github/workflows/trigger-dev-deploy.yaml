@@ -1,10 +1,11 @@
-name: 'Trigger dev deploy'
+name: "Trigger dev deploy"
 on:
   workflow_dispatch:
     inputs:
       monorepoGitHash:
         description: git hash of the monorepo
         required: true
+
 jobs:
   publish:
     name: "Prepare deploy to dev"
@@ -14,21 +15,15 @@ jobs:
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
-          token: ${{ secrets.TEAM_ACCESS_TOKEN }}
-      - name: "Git config user email and name"
-        run: |
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "github-actions"
+          token: ${{ secrets.TEST_TOKEN }}
       - name: "Fetch latest forms and translations from master, ignore merge conflicts due to monorepo reference"
         run: git merge origin/master || git add MONOREPO
       - name: "Update MONOREPO reference"
         run: echo -n ${{ github.event.inputs.monorepoGitHash }} > MONOREPO
-      - name: "Add MONOREPO"
-        run: git add MONOREPO
-      - name: "No unstaged changes should exist, quit otherwise"
-        run: git diff --quiet
-      - name: "Commit changes"
-        run: |
-          git commit -m "[${{ github.ref }}] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
-      - name: "Push changes"
-        run: git push
+      - name: "Add and commit changes"
+        uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+        with:
+          add: "MONOREPO"
+          author_name: Github Actions
+          default_author: github_actions
+          message: "[${{ github.ref }}] monorepo ref: ${{ github.event.inputs.monorepoGitHash }}"
