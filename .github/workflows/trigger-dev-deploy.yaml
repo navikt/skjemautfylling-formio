@@ -16,7 +16,6 @@ jobs:
         with:
           private-key: ${{ secrets.PUBLISHING_APP_PRIVATE_KEY }}
           app-id: ${{ secrets.PUBLISHING_APP_ID }}
-          repo: navikt/skjemautfylling-formio
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.ref }}
