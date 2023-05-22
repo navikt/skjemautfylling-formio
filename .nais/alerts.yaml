@@ -15,13 +15,13 @@ spec:
           annotations:
             title: "Høy feilrate i logger"
             consequence: "Det kan være mange forskjellige årsaker til feilmeldingene. Se i loggene og undersøk hvorfor det er flere feilmeldinger enn normalt."
-            action: "https://logs.adeo.no/goto/097ce6507d3f5cb2c16f1417d47a9e3d"
+            action: {{logs-url}}
           labels:
             service: skjemautfylling
             namespace: fyllut-sendinn
-            special_type_to_use_in_alertmanager_config: "fyllut-sendinn-alerts"
+            special_type_to_use_in_alertmanager_config: {{special-type-to-use-in-alertmanager-config}}
             alert_type: custom
-          #            severity: critical
+            severity: critical
 
         - alert: nav.no/fyllut er nede
           expr: kube_deployment_status_replicas_available{deployment="skjemautfylling"} == 0
@@ -36,4 +36,4 @@ spec:
             namespace: fyllut-sendinn
             special_type_to_use_in_alertmanager_config: "fyllut-sendinn-alerts"
             alert_type: custom
-#            severity: critical
+            severity: critical
