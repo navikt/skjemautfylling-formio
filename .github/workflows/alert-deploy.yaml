@@ -1,22 +1,45 @@
-name: Deploy alerts to NAIS
+name: Manually deploy alerts
+run-name: Manual ${{ github.event.inputs.environment }} deploy of branch ${{ github.head_ref || github.ref_name }}
+
 on:
-  push:
-    branches:
-      - master
-      - auto-deploy-alerts
-    paths:
-      - '.nais/alerts.yaml'
-      - '.github/workflows/alert-deploy.yaml'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - prod
+
 jobs:
-  apply-alerts:
-    name: Apply alerts to cluster
+  dev-deploy:
+    if: github.event.inputs.environment == 'dev'
+    name: Deploy to dev
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: deploy to prod
+      - name: Deploy to dev
+        uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/alerts.yaml
+          VARS: .nais/dev-alert.yaml
+
+  prod-deploy:
+    if: github.event.inputs.environment == 'prod'
+    name: Deploy to prod
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to prod
         uses: nais/deploy/actions/deploy@v1
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
           RESOURCE: .nais/alerts.yaml
+          VARS: .nais/prod-alert.yaml
