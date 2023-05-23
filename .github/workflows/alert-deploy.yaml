@@ -1,21 +1,19 @@
-name: Manually deploy alerts
-run-name: Manual ${{ github.event.inputs.environment }} deploy of branch ${{ github.head_ref || github.ref_name }}
+name: Deploy alerts
+run-name: Deploy alerts for Fyllut to dev and prod
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to deploy'
-        required: true
-        default: 'dev'
-        type: choice
-        options:
-          - dev
-          - prod
+  push:
+    branches:
+      - master
+      - auto-deploy-alerts
+    paths:
+      - '.nais/alerts.yaml'
+      - '.nais/dev-alert.yaml'
+      - '.nais/prod-alert.yaml'
+      - '.github/workflows/alert-deploy.yaml'
 
 jobs:
   dev-deploy:
-    if: github.event.inputs.environment == 'dev'
     name: Deploy to dev
     runs-on: ubuntu-latest
     steps:
@@ -30,7 +28,6 @@ jobs:
           VARS: .nais/dev-alert.yaml
 
   prod-deploy:
-    if: github.event.inputs.environment == 'prod'
     name: Deploy to prod
     runs-on: ubuntu-latest
     steps:
