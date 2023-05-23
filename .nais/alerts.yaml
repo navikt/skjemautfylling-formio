@@ -23,12 +23,12 @@ spec:
             alert_type: custom
             severity: critical
 
-        - alert: nav.no/fyllut er nede
+        - alert: Fyllut er nede
           expr: kube_deployment_status_replicas_available{deployment="skjemautfylling"} == 0
           for: 1m
           annotations:
-            title: "nav.no/fyllut er nede"
-            consequence: "Tjenesten er utilgjengelig for brukere av nav.no. Undersøk hvorfor poddene er nede."
+            title: "Fyllut er nede"
+            consequence: "Tjenesten er utilgjengelig for brukere. Undersøk hvorfor poddene er nede."
             action: "https://logs.adeo.no/goto/097ce6507d3f5cb2c16f1417d47a9e3d"
             sla: respond within 1h, during office hours
           labels:
