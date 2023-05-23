@@ -17,7 +17,7 @@ spec:
             consequence: "Det kan være mange forskjellige årsaker til feilmeldingene. Se i loggene og undersøk hvorfor det er flere feilmeldinger enn normalt."
             action: {{logs-url}}
           labels:
-            service: skjemautfylling
+            service: Fyllut
             namespace: fyllut-sendinn
             special_type_to_use_in_alertmanager_config: {{special-type-to-use-in-alertmanager-config}}
             alert_type: custom
@@ -32,7 +32,7 @@ spec:
             action: "https://logs.adeo.no/goto/097ce6507d3f5cb2c16f1417d47a9e3d"
             sla: respond within 1h, during office hours
           labels:
-            service: skjemautfylling
+            service: Fyllut
             namespace: fyllut-sendinn
             special_type_to_use_in_alertmanager_config: "fyllut-sendinn-alerts"
             alert_type: custom
