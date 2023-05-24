@@ -1,2 +1,3 @@
+env-name: "prod-gcp"
 logs-url: "https://logs.adeo.no/app/r/s/LX3zy"
 special-type-to-use-in-alertmanager-config: "fyllut-sendinn-alerts"
