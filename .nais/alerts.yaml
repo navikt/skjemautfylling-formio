@@ -29,7 +29,7 @@ spec:
           annotations:
             title: "Fyllut er nede"
             consequence: "Tjenesten er utilgjengelig for brukere. Undersøk hvorfor poddene er nede."
-            action: "https://logs.adeo.no/goto/097ce6507d3f5cb2c16f1417d47a9e3d"
+            action: {{logs-url}}
             sla: respond within 1h, during office hours
           labels:
             service: Fyllut
