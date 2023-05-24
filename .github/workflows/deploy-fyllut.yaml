@@ -4,7 +4,6 @@ on:
     branches:
       - master
       - dev-deploy
-      - experimental-deploy
 env:
   IMAGE: "ghcr.io/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
   IMAGE_FYLLUT_BASE: "ghcr.io/navikt/skjemabygging-formio/${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
@@ -121,24 +120,6 @@ jobs:
           "CLUSTER": "dev-gcp"
           "RESOURCE": "./fyllut-config/config.yaml"
           "VARS": "./fyllut-config/dev-delingslenke.yaml"
-
-  deploy-fyllut-experimental-to-dev:
-    name: "Deploy 'fyllut'-experimental to dev"
-    if: github.ref == 'refs/heads/experimental-deploy'
-    needs: "package-and-push-fyllut"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Fetch NAIS config
-        run: bin/fetchNaisConfig.sh dev-experimental fyllut-config
-      - name: "Deploy to dev-experimental"
-        uses: "nais/deploy/actions/deploy@v1"
-        env:
-          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
-          "CLUSTER": "dev-gcp"
-          "RESOURCE": "./fyllut-config/config.yaml"
-          "VARS": "./fyllut-config/dev-experimental.yaml"
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
