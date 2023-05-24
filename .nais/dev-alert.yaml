@@ -1,0 +1,2 @@
+logs-url: "https://logs.adeo.no/app/r/s/zSOoU"
+special-type-to-use-in-alertmanager-config: "fyllut-sendinn-alerts-dev"
