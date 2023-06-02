@@ -10,7 +10,7 @@ spec:
     - name: {{ env-name }}
       rules:
         - alert: Høy feilrate i logger
-          expr: (100 * sum by (app, namespace) (rate(log_messages_errors{app="skjemautfylling",level=~"Warning|Error"}[3m])) / sum by (app, log_namespace) (rate(log_messages_total{log="skjemautfylling"}[3m]))) > 10
+          expr: (100 * sum by (app, namespace) (rate(log_messages_errors{app="skjemautfylling",level=~"Warning|Error"}[3m])) / sum by (app, namespace) (rate(log_messages_total{app="skjemautfylling"}[3m]))) > 10
           for: 3m
           annotations:
             title: "Høy feilrate i logger"
