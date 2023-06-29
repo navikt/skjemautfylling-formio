@@ -34,6 +34,20 @@ spec:
           labels:
             service: Fyllut
             namespace: fyllut-sendinn
-            special_type_to_use_in_alertmanager_config: "fyllut-sendinn-alerts"
+            special_type_to_use_in_alertmanager_config: {{special-type-to-use-in-alertmanager-config}}
+            alert_type: custom
+            severity: critical
+
+        - alert: Feil ved kall til Exstream pdf
+          expr: sum(fyllut_exstream_pdf_failures_total{deployment="skjemautfylling"}) > 0
+          for: 1m
+          annotations:
+            title: "Et eller flere kall til Exstream pdf-tjenesten har feilet"
+            consequence: "Det kan være mange forskjellige årsaker til dette. Se i loggene og undersøk hvorfor det har feilet."
+            action: {{logs-url}}
+          labels:
+            service: Fyllut
+            namespace: fyllut-sendinn
+            special_type_to_use_in_alertmanager_config: {{special-type-to-use-in-alertmanager-config}}
             alert_type: custom
             severity: critical
