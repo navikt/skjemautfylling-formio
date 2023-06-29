@@ -43,7 +43,7 @@ spec:
           for: 1m
           annotations:
             title: "Et eller flere kall til Exstream pdf-tjenesten har feilet"
-            consequence: "Det kan være mange forskjellige årsaker til dette. Se i loggene og undersøk hvorfor det har feilet."
+            consequence: "Undersøk loggene for å se hvorfor det har feilet."
             action: {{logs-url}}
           labels:
             service: Fyllut
