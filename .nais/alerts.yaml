@@ -9,12 +9,12 @@ spec:
   groups:
     - name: {{ env-name }}
       rules:
-        - alert: Høy feilrate i logger
+        - alert: High number of errors
           expr: (100 * sum by (app, namespace) (rate(log_messages_errors{app="skjemautfylling",level=~"Warning|Error"}[3m])) / sum by (app, namespace) (rate(log_messages_total{app="skjemautfylling"}[3m]))) > 10
           for: 3m
           annotations:
-            title: "Høy feilrate i logger"
-            consequence: "Det kan være mange forskjellige årsaker til feilmeldingene. Se i loggene og undersøk hvorfor det er flere feilmeldinger enn normalt."
+            title: "High number of errors logged"
+            consequence: "There can be different causes for errors, check logs for cause and evaluation of consequences."
             action: {{logs-url}}
           labels:
             service: Fyllut
@@ -23,17 +23,31 @@ spec:
             alert_type: custom
             severity: critical
 
-        - alert: Fyllut er nede
+        - alert: Fyllut is unavailable
           expr: kube_deployment_status_replicas_available{deployment="skjemautfylling"} == 0
           for: 1m
           annotations:
-            title: "Fyllut er nede"
-            consequence: "Tjenesten er utilgjengelig for brukere. Undersøk hvorfor poddene er nede."
+            title: "Fyllut is unavailable"
+            consequence: "Service is unavailable to users. "
             action: {{logs-url}}
             sla: respond within 1h, during office hours
           labels:
             service: Fyllut
             namespace: fyllut-sendinn
-            special_type_to_use_in_alertmanager_config: "fyllut-sendinn-alerts"
+            special_type_to_use_in_alertmanager_config: {{special-type-to-use-in-alertmanager-config}}
             alert_type: custom
             severity: critical
+
+        - alert: Request to Exstream pdf failed
+          expr: (sum(max_over_time(fyllut_exstream_pdf_failures_total{}[3m]) or vector(0)) - sum(max_over_time(fyllut_exstream_pdf_failures_total{}[3m] offset 3m) or vector(0))) > 0
+          for: 30s
+          annotations:
+            title: "One or more requests to Exstream pdf service failed"
+            consequence: "Check logs for more details."
+            action: {{logs-url}}
+          labels:
+            service: Fyllut
+            namespace: fyllut-sendinn
+            special_type_to_use_in_alertmanager_config: {{special-type-to-use-in-alertmanager-config}}
+            alert_type: custom
+            severity: warning
