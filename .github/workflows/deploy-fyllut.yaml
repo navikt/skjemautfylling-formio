@@ -16,6 +16,10 @@ jobs:
   package-and-push-fyllut:
     name: "Package 'fyllut'"
     runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      id-token: "write"
+      packages: "read"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
