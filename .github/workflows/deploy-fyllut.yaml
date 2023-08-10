@@ -5,7 +5,7 @@ on:
       - master
       - dev-deploy
 env:
-  IMAGE_FYLLUT_BASE: "ghcr.io/navikt/skjemabygging-formio/${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
+  IMAGE_FYLLUT_BASE: "europe-north1-docker.pkg.dev/nais-management-233d/skjemadigitalisering/skjemabygging-formio-${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
   MONOREPO_BASE_URL: "https://raw.githubusercontent.com/navikt/skjemabygging-formio"
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
   BYGGER_URL: "https://skjemabygging.nav.no"
