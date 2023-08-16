@@ -43,7 +43,7 @@ jobs:
             monorepo_git_sha=${{ env.MONOREPO_GIT_SHA }}
             skjema_dir=forms
             translation_dir=translations
-            resources_dir=resources .
+            resources_dir=resources
             image_fyllut_base=${{ env.IMAGE_FYLLUT_BASE }}
           pull: true
 
