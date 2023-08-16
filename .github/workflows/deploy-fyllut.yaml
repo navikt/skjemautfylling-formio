@@ -5,8 +5,7 @@ on:
       - master
       - dev-deploy
 env:
-  IMAGE: "ghcr.io/${{ github.repository }}/${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}:${{ github.sha }}"
-  IMAGE_FYLLUT_BASE: "ghcr.io/navikt/skjemabygging-formio/${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
+  IMAGE_FYLLUT_BASE: "europe-north1-docker.pkg.dev/nais-management-233d/skjemadigitalisering/skjemabygging-formio-${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
   MONOREPO_BASE_URL: "https://raw.githubusercontent.com/navikt/skjemabygging-formio"
   PUSHER_APP_SECRET: ${{ secrets.PUSHER_APP_SECRET }}
   BYGGER_URL: "https://skjemabygging.nav.no"
@@ -17,33 +16,42 @@ jobs:
   package-and-push-fyllut:
     name: "Package 'fyllut'"
     runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      id-token: "write"
+      packages: "read"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.17.1'
+          node-version: "16.17.1"
+
       - name: Read monorepo commit sha
         run: echo "MONOREPO_GIT_SHA=$(cat MONOREPO)" >> $GITHUB_ENV
-      - name: Login to GitHub Package Repository
-        uses: docker/login-action@v2
+
+      - name: "Build and push Docker image"
+        uses: nais/docker-build-push@v0
+        id: docker-build-push
         with:
-          registry: ghcr.io
-          username: ${{ github.repository }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: "Build and publish Docker image"
-        run: >
-          docker build --pull --tag ${IMAGE}
-          --build-arg image_fyllut_base=${IMAGE_FYLLUT_BASE}
-          --build-arg git_sha=${{ github.sha }}
-          --build-arg monorepo_git_sha=${{ env.MONOREPO_GIT_SHA }}
-          --build-arg skjema_dir=forms
-          --build-arg translation_dir=translations
-          --build-arg resources_dir=resources .
-          && docker push ${IMAGE}
+          team: skjemadigitalisering
+          identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}
+          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }}
+          image_suffix: ${{ github.ref == 'refs/heads/master' && 'fyllut' || 'fyllut-dev' }}
+          build_args: |
+            git_sha=${{ github.sha }}
+            monorepo_git_sha=${{ env.MONOREPO_GIT_SHA }}
+            skjema_dir=forms
+            translation_dir=translations
+            resources_dir=resources .
+            image_fyllut_base=${IMAGE_FYLLUT_BASE}
+          pull: true
+
       - name: "Notify job failure"
         if: ${{ github.ref == 'refs/heads/master' && failure() }}
         run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs failure
+    outputs:
+      image: ${{ steps.docker-build-push.outputs.image }}
 
   deploy-fyllut-to-prod:
     name: "Deploy 'fyllut' to prod"
@@ -55,16 +63,18 @@ jobs:
         uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.17.1'
+          node-version: "16.17.1"
       - name: Fetch NAIS config
         run: bin/fetchNaisConfig.sh prod fyllut-config
       - name: "Deploy to prod"
         uses: "nais/deploy/actions/deploy@v1"
         env:
-          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
-          "CLUSTER": "prod-gcp"
-          "RESOURCE": "./fyllut-config/config.yaml"
-          "VARS": "./fyllut-config/prod.yaml"
+          APIKEY: "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          CLUSTER: "prod-gcp"
+          RESOURCE: "./fyllut-config/config.yaml"
+          VARS: "./fyllut-config/prod.yaml"
+          VAR: "image=${{ needs.package-and-push-fyllut.outputs.image }}"
+
       - name: "Notify job success"
         if: ${{ success() }}
         run: yarn && cat $GITHUB_EVENT_PATH | node bin/notifyDeploy.mjs success
@@ -98,10 +108,11 @@ jobs:
       - name: "Deploy to dev"
         uses: "nais/deploy/actions/deploy@v1"
         env:
-          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
-          "CLUSTER": "dev-gcp"
-          "RESOURCE": "./fyllut-config/config.yaml"
-          "VARS": "./fyllut-config/dev.yaml"
+          APIKEY: "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          CLUSTER: "dev-gcp"
+          RESOURCE: "./fyllut-config/config.yaml"
+          VARS: "./fyllut-config/dev.yaml"
+          VAR: "image=${{ needs.package-and-push-fyllut.outputs.image }}"
 
   deploy-fyllut-delingslenke-to-dev:
     name: "Deploy 'fyllut'-delingslenke to dev"
@@ -116,10 +127,11 @@ jobs:
       - name: "Deploy to dev"
         uses: "nais/deploy/actions/deploy@v1"
         env:
-          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
-          "CLUSTER": "dev-gcp"
-          "RESOURCE": "./fyllut-config/config.yaml"
-          "VARS": "./fyllut-config/dev-delingslenke.yaml"
+          APIKEY: "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          CLUSTER: "dev-gcp"
+          RESOURCE: "./fyllut-config/config.yaml"
+          VARS: "./fyllut-config/dev-delingslenke.yaml"
+          VAR: "image=${{ needs.package-and-push-fyllut.outputs.image }}"
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
