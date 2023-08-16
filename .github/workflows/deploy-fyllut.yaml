@@ -44,7 +44,7 @@ jobs:
             skjema_dir=forms
             translation_dir=translations
             resources_dir=resources .
-            image_fyllut_base=${IMAGE_FYLLUT_BASE}
+            image_fyllut_base=${{ env.IMAGE_FYLLUT_BASE }}
           pull: true
 
       - name: "Notify job failure"
