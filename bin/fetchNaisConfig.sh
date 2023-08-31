@@ -23,7 +23,7 @@ function usage {
   echo -e "Usage: ${SCRIPT} <environment> <target-dir>"
   echo -e ""
   echo -e "Options:"
-  echo -e "  - environment\t\tprod|dev|dev-delingslenke|dev-experimental"
+  echo -e "  - environment\t\tprod|dev|dev-delingslenke"
   echo -e ""
 }
 

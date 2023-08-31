@@ -1,22 +1,42 @@
-name: Deploy alerts to NAIS
+name: Deploy alerts
+run-name: Deploy alerts for Fyllut to dev and prod
+
 on:
   push:
     branches:
       - master
       - auto-deploy-alerts
     paths:
-      - '.nais/alerts-prod-gcp.yaml'
+      - '.nais/alerts.yaml'
+      - '.nais/dev-alert.yaml'
+      - '.nais/prod-alert.yaml'
       - '.github/workflows/alert-deploy.yaml'
+
 jobs:
-  apply-alerts:
-    name: Apply alerts to cluster
+  dev-deploy:
+    name: Deploy to dev
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
-      - name: deploy to prod
+        uses: actions/checkout@v3
+      - name: Deploy to dev
+        uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/alerts.yaml
+          VARS: .nais/dev-alert.yaml
+
+  prod-deploy:
+    name: Deploy to prod
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to prod
         uses: nais/deploy/actions/deploy@v1
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
-          RESOURCE: .nais/alerts-prod-gcp.yaml
+          RESOURCE: .nais/alerts.yaml
+          VARS: .nais/prod-alert.yaml
