@@ -38,11 +38,11 @@ spec:
             alert_type: custom
             severity: critical
 
-        - alert: Request to Exstream pdf failed
-          expr: (sum(max_over_time(fyllut_exstream_pdf_failures_total{}[3m]) or vector(0)) - sum(max_over_time(fyllut_exstream_pdf_failures_total{}[3m] offset 3m) or vector(0))) > 0
+        - alert: Requests to Exstream pdf failed
+          expr: (sum(max_over_time(fyllut_exstream_pdf_failures_total{}[30m]) or vector(0)) - sum(max_over_time(fyllut_exstream_pdf_failures_total{}[30m] offset 30m) or vector(0))) >= 5
           for: 30s
           annotations:
-            title: "One or more requests to Exstream pdf service failed"
+            title: "Multiple requests to Exstream pdf service failed lately"
             consequence: "Check logs for more details."
             action: {{logs-url}}
           labels:
