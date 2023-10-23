@@ -142,6 +142,6 @@ jobs:
       - name: "Slack notification"
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_DEV }}
           SLACK_FOOTER: "Deploy av fyllut til dev har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
           SLACK_COLOR: "#ff9100"
