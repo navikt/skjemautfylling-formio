@@ -1,0 +1,3808 @@
+{
+  "soknadsobjekter": [
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Søknad om dagpenger (ikke permittert)",
+      "navnEN": "Application for unemployment benefits",
+      "hovedskjema": "NAV 04-01.03",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Søknad om dagpenger ved permittering",
+      "navnEN": "Claim for unemployment benefits in the event of temporary lay-off",
+      "hovedskjema": "NAV 04-01.04",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Søknad om gjenopptak av dagpenger",
+      "navnEN": "Application for resumption of unemployment benefit",
+      "hovedskjema": "NAV 04-16.03",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Søknad om gjenopptak av dagpenger ved permittering",
+      "navnEN": "Application for resumption of unemployment benefit in connection with temporary lay-off",
+      "hovedskjema": "NAV 04-16.04",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Søknad om attest PD U1/N-301 til bruk ved overføring av dagpengerettigheter",
+      "navnEN": "Application for certificate PD U1/N-301 for use in the transfer of unemployment benefit rights",
+      "hovedskjema": "NAV 04-02.05",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Bekreftelse på ansettelsesforhold",
+      "navnEN": "Confirmation of employment",
+      "hovedskjema": "NAV 04-02.03",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Bekreftelse på sluttårsak/nedsatt arbeidstid (ikke permittert)",
+      "navnEN": "",
+      "hovedskjema": "NAV 04-08.03",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Søknad om å beholde dagpengene mens du tar utdanning eller opplæring",
+      "navnEN": "",
+      "hovedskjema": "NAV 04-06.05",
+      "tema": "DAG",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Egenerklæring - overdragelse av lønnskrav ",
+      "navnEN": "",
+      "hovedskjema": "NAV 04-03.07",
+      "tema": "DAG",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Bekreftelse på arbeidsforhold og permittering",
+      "navnEN": "Confirmation of employment and lay-off",
+      "hovedskjema": "NAV 04-08.04",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Søknad om dagpenger under etablering av egen virksomhet",
+      "navnEN": "Application for unemployment benefit when setting up your own business",
+      "hovedskjema": "NAV 04-06.08",
+      "tema": "DAG",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Dagpenger",
+      "navn": "Søknad om utstedelse av attest PD U2",
+      "navnEN": "Application for certificate PD U2",
+      "hovedskjema": "NAV 04-02.01",
+      "tema": "DAG",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Tiltakspenger",
+      "navn": "Søknad om tiltakspenger",
+      "navnEN": "Søknad om tiltakspenger",
+      "hovedskjema": "NAV 76-13.45",
+      "tema": "IND",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Kjøreliste for godkjent bruk av egen bil",
+      "navn": "Kjøreliste for godkjent bruk av egen bil",
+      "navnEN": "",
+      "hovedskjema": "NAV 00-01.01",
+      "tema": "TSO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Bistand fra NAV for å komme i arbeid",
+      "navn": "Registreringsskjema for tilskudd til utdanning",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-07.10",
+      "tema": "OPP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Bistand fra NAV for å komme i arbeid",
+      "navn": "Oppfølging bistand",
+      "navnEN": "Oppfølging bistand",
+      "hovedskjema": "NAV 00-01.00",
+      "tema": "OPP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Starte egen bedrift",
+      "navn": "Søknad om dagpenger under etablering av egen virksomhet",
+      "navnEN": "Application for unemployment benefit when setting up your own business",
+      "hovedskjema": "NAV 04-06.08",
+      "tema": "DAG",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Starte egen bedrift",
+      "navn": "Søknad om arbeidsavklaringspenger under etablering av egen virksomhet (utviklingsfase)",
+      "navnEN": "",
+      "hovedskjema": "NAV 11-13.08",
+      "tema": "AAP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Starte egen bedrift",
+      "navn": "Søknad om arbeidsavklaringspenger under etablering av egen virksomhet (oppstartfase)",
+      "navnEN": "",
+      "hovedskjema": "NAV 11-13.09",
+      "tema": "AAP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Søke jobb i utlandet",
+      "navn": "Søknad om utstedelse av attest PD U2",
+      "navnEN": "Application for certificate PD U2",
+      "hovedskjema": "NAV 04-02.01",
+      "tema": "DAG",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Lønnsgaranti - Arbeidsgiver betaler ikke ut lønn",
+      "navn": "Søknad om lønnsgarantidekning - melding av lønnskrav m.v. til konkursboet",
+      "navnEN": "Application for wage guarantee - Notification of wage claims etc. to the bankrupt estate",
+      "hovedskjema": "NAV 67-01.01",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Arbeidsavklaringspenger (AAP)",
+      "navn": "Søknad om arbeidsavklaringspenger",
+      "navnEN": "Application for work assessment allowance",
+      "hovedskjema": "NAV 11-13.05",
+      "tema": "AAP",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Arbeidsavklaringspenger (AAP)",
+      "navn": "Søknad om å beholde arbeidsavklaringspenger under opphold i utlandet",
+      "navnEN": "",
+      "hovedskjema": "NAV 11-03.07",
+      "tema": "AAP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Arbeidsavklaringspenger (AAP)",
+      "navn": "Søknad om reisestønad (AAP)",
+      "navnEN": "",
+      "hovedskjema": "NAV 11-12.05",
+      "tema": "AAP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Arbeid",
+      "underkategori": "Meldekort",
+      "navn": "Meldekort",
+      "navnEN": "",
+      "hovedskjema": "NAV 00-10.01",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Sykepenger",
+      "navn": "Inntektsopplysninger for arbeidstaker som skal ha sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-30.01",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Sykepenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-35.01",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Sykepenger",
+      "navn": "Sykepenger - bestride sykmelding",
+      "navnEN": "Sickness benefit - dispute sick leave",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Refusjon av utbetalte omsorgspenger til arbeidstaker",
+      "navn": "Inntektsmelding for arbeidstaker som skal ha pleie-/opplæringspenger og omsorgspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-30.01",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Arbeids- og utdanningsreiser",
+      "navn": "Søknad om stønad til arbeids- og utdanningsreiser",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-00.42",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bytte av hjelpemiddel",
+      "navn": "Bytte av hjelpemiddel (for hjelpemiddelformidlere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.31",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bytte av hjelpemiddel",
+      "navn": "Bytte av hjelpemiddel (for personbrukere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.31",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bestillingsordningen",
+      "navn": "Bestilling av tekniske hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.05",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bevegelse",
+      "navn": "Søknad om hjelpemidler til bevegelse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bevegelse",
+      "navn": "Søknad om hjelpemidler til bevegelse (for hjelpemiddelformidlere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bevegelse",
+      "navn": "Hjelp til vurdering og utprøving (bevegelse)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bil (motorkjøretøy)",
+      "navn": "Søknad om stønad til anskaffelse av motorkjøretøy og / eller spesialutstyr og tilpassing til bil",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.40",
+      "tema": "BIL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bil (motorkjøretøy)",
+      "navn": "Søknad om refusjon av reiseutgifter i forbindelse med bilstønadsordningen",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.17",
+      "tema": "BIL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bil (motorkjøretøy)",
+      "navn": "Legeerklæring for motorkjøretøy",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.42",
+      "tema": "BIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bil (motorkjøretøy)",
+      "navn": "Tilleggsskjema fra ergo- eller fysioterapeut i forbindelse med søknad om motorkjøretøy og spesialutstyr / tilpasning",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.43",
+      "tema": "BIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Folkehøyskole",
+      "navn": "Søknad om stønad til ekstrautgifter på folkehøyskole",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.24",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Hjelp til vurdering og utprøving (hørsel)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om hjelpemidler (hørsel)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om hjelpemidler til hørsel (for hjelpemiddelformidlere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om tolk til døve, døvblinde og hørselshemmede",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.06",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om høreapparat / tinnitusmaskerer / tilleggsutstyr",
+      "navnEN": "Søknad om høreapparat / tinnitusmaskerer / tilleggsutstyr",
+      "hovedskjema": "NAV 10-07.08",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Bekreftelse på utlån og tildeling av høreapparat / tinnitusmaskerer / tilleggsutstyr​",
+      "navnEN": "Bekreftelse på utlån og tildeling av høreapparat / tinnitusmaskerer / tilleggsutstyr​",
+      "hovedskjema": "NAV 10-07.80",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om stønad til tilpasningskurs",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.18",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kommunikasjon",
+      "navn": "Søknad om hjelpemidler til kommunikasjon",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kommunikasjon",
+      "navn": "Hjelp til vurdering og utprøving (kommunikasjon og kognisjon)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om refusjon av reiseutgifter knyttet til ortopediske hjelpemidler, parykk, tilpasningskurs, folkehøyskole, grunnmønster eller brystprotese",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.16",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om stønad til parykk",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.57",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om stønad til øyeprotese eller ansiktsprotese",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.58",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om stønad til brystprotese eller spesialbrystholder",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.59",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om stønad til alminnelig fottøy ved ulik fotstørrelse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.60",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om refusjon av betalt egenandel for fottøy, fotseng og høreapparat ved yrkesskade",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.61",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Innsending av førstegangssøknad om ortopedisk hjelpemiddel",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.11",
+      "tema": "HEL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": " Innsending av søknad om fornyelse av ortopedisk hjelpemiddel",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.13",
+      "tema": "HEL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om hjelpemidler (syn)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Hjelp til vurdering og utprøving (syn)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om tolk til døve, døvblinde og hørselshemmede",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.06",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om stønad til tilpasningskurs",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.18",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om briller til behandling og/eller forebygging av amblyopi",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.14",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om lese- og sekretærhjelp for blinde og svaksynte",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.30",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Regning for lese- og sekretærhjelp for blinde og svaksynte",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.09",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Tilskudd ved kjøp av briller til barn",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.34",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om dekning av utgifter til irislinse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.15",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Førerhund og servicehund",
+      "navn": " Søknad om førerhund",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.50",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Førerhund og servicehund",
+      "navn": "Søknad om dekning av ekstraordinære veterinærutgifter for førerhund",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.53",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Førerhund og servicehund",
+      "navn": "Søknad om servicehund",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.54",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Seksualtekniske hjelpemidler",
+      "navn": "Seksualteknisk hjelpemiddel",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-06.06",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Reiseutgifter",
+      "navn": "Søknad om refusjon av reiseutgifter - tekniske hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.19",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Reiseutgifter",
+      "navn": "Søknad om refusjon av reiseutgifter knyttet til ortopediske hjelpemidler, parykk, tilpasningskurs, folkehøyskole, grunnmønster eller brystprotese",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.16",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Reiseutgifter",
+      "navn": "Søknad om refusjon av reiseutgifter i forbindelse med bilstønadsordningen",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.17",
+      "tema": "BIL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Søknad om hjelpemidler PC eller nettbrett",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Fullmakt i forbindelse med søknad om hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.04",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Behov for hjelpemidler knyttet til individuell plan",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.23",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Søknad om stønad til grunnmønster og søm etter grunnmønster",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.55",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Innlevering av tekniske hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.63",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Tilrettelegging av arbeidsplass",
+      "navn": "Søknad om tekniske hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Tilrettelegging av arbeidsplass",
+      "navn": "Hjelp til vurdering og utprøving av hjelpemidler på arbeidsplassen",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Fullmakt i forbindelse med søknad om tekniske hjelpemidler",
+      "navn": "Fullmakt i forbindelse med søknad om hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.04",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Tilskudd til rimelige hjelpemidler",
+      "navn": "Søknad om tilskudd til rimelige hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "PC eller nettbrett",
+      "navn": "Søknad om hjelpemidler PC eller nettbrett",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "PC eller nettbrett",
+      "navn": "Hjelp til vurdering og utprøving (kommunikasjon og kognisjon)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kognisjon",
+      "navn": "Søknad om hjelpemidler ved kognitiv funksjonsnedsettelse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kognisjon",
+      "navn": "Søknad om hjelpemidler ved kognitiv funksjonsnedsettelse (for hjelpemiddelformidlere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kognisjon",
+      "navn": "Hjelp til vurdering og utprøving (kommunikasjon og kognisjon)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Søknad om hjelpemidler",
+      "navn": "Søknad om hjelpemidler",
+      "navnEN": "Søknad om hjelpemidler",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Yrkesskade",
+      "underkategori": "Skade/sykdom påført under arbeid på norsk eller utenlandsk landterritorium",
+      "navn": "Melding om yrkesskade eller yrkessykdom som er påført under arbeid på norsk eller utenlandsk landterritorium",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-07.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Yrkesskade",
+      "underkategori": "Skade/sykdom påført i forbindelse med petroleumsvirksomhet til havs",
+      "navn": "Melding om yrkesskade eller yrkessykdom som er påført i forbindelse med petroleumsvirksomhet til havs",
+      "navnEN": "Report of occupational injury or occupational illness sustained in connection with petroleum activities at sea",
+      "hovedskjema": "NAV 13-06.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Yrkesskade",
+      "underkategori": "Skade/sykdom påført under tjeneste på skip eller under fiske/fangst",
+      "navn": "Melding om yrkesskade eller yrkessykdom som er påført under tjeneste på skip eller under fiske/fangst",
+      "navnEN": "Report on occupational injury / personal injury sustained in the course of duties on board ship or during fishing/catching",
+      "hovedskjema": "NAV 13-07.08",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Yrkesskade",
+      "underkategori": "Skade/sykdom som er påført under militær tjenestegjøring",
+      "navn": "Melding om yrkesskade eller yrkessykdom som er påført eller oppstått under militær tjenestegjøring",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-08.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Yrkesskade",
+      "underkategori": "Skade/sykdom påført elev eller student",
+      "navn": "Melding om yrkesskade eller yrkessykdom påført elev/student",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-10.01",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Yrkesskade",
+      "underkategori": "Søknad om opptak i frivillig trygd med rett til særytelser ved yrkesskade for selvstendig næringsdrivende",
+      "navn": "Søknad fra selvstendig næringsdrivende og frilansere om frivillig opptak i NAVs yrkesskadeordning",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-13.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Yrkesskade",
+      "underkategori": "Tannlegeerklæring ved yrkesskade"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid i Norge og på norsk kontinentalsokkel",
+      "navn": "Søknad om å bli medlem i folketrygden under opphold i Norge",
+      "navnEN": "Application for insurance during stay in Norway",
+      "hovedskjema": "NAV 02-07.05",
+      "tema": "MED",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid i Norge og på norsk kontinentalsokkel",
+      "navn": "Søknad om A1 - Avklaring av trygdetilhørighet når du arbeider eller driver selvstendig næringsvirksomhet innen EØS/Sveits (i Norge)",
+      "navnEN": "A1 application - Determination of applicable social security legislation while working in the EEA or Switzerland",
+      "hovedskjema": "NAV 02-08.07",
+      "tema": "MED",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid i Norge og på norsk kontinentalsokkel",
+      "navn": "Søknad om kontantstøtte til småbarnsforeldre",
+      "navnEN": "Form for cash-for-care benefit",
+      "hovedskjema": "NAV 34-00.08",
+      "tema": "KON",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid i Norge og på norsk kontinentalsokkel",
+      "navn": "Søknad om barnetrygd ordinær",
+      "navnEN": "Application for child benefit",
+      "hovedskjema": "NAV 33-00.07",
+      "tema": "BAR",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid i Norge og på norsk kontinentalsokkel",
+      "navn": "Egenerklæring for utenlandske sykmeldinger",
+      "navnEN": "Declaration form for Non-Norwegian Medical Certificates",
+      "hovedskjema": "NAV 08-09.06",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Søknad om A1 - Avklaring av trygdetilhørighet når du arbeider eller driver selvstendig næringsvirksomhet innen EØS/Sveits (utenfor Norge)",
+      "navnEN": "A1 application – Determination of applicable social security legislation while working in the EEA or Switzerland (outside Norway)",
+      "hovedskjema": "NAV 02-08.07",
+      "tema": "MED",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Søknad om å være omfattet av norsk trygdelovgivning under opphold i et annet EØS-land eller Sveits",
+      "navnEN": "Application to be covered by Norwegian social security legislation during stay in the EEA / Switzerland",
+      "hovedskjema": "NAV 02-08.09",
+      "tema": "MED",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Søknad om medlemskap i folketrygden under opphold utenfor EØS",
+      "navnEN": "Application for membership in the National Insurance Scheme during your stay outside the EEA",
+      "hovedskjema": "NAV 02-08.05",
+      "tema": "MED",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Søknad om å beholde sykepenger under opphold i utlandet",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-09.07",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Søknad om å beholde arbeidsavklaringspenger under opphold i utlandet",
+      "navnEN": "",
+      "hovedskjema": "NAV 11-03.07",
+      "tema": "AAP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Søknad om attest PD U1/N-301 til bruk ved overføring av dagpengerettigheter",
+      "navnEN": "Application for certificate PD U1/N-301 for use in the transfer of unemployment benefit rights",
+      "hovedskjema": "NAV 04-02.05",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Bekreftelse på ansettelsesforhold",
+      "navnEN": "Confirmation of employment",
+      "hovedskjema": "NAV 04-02.03",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Søknad om utstedelse av attest PD U2",
+      "navnEN": "Application for certificate PD U2",
+      "hovedskjema": "NAV 04-02.01",
+      "tema": "DAG",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Opphold eller arbeid utenfor Norge",
+      "navn": "Leveattest",
+      "navnEN": "Life certificate",
+      "hovedskjema": "NAV 21-03.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Til eller fra Norge",
+      "underkategori": "Kontoendringer",
+      "navn": "Melding om nytt bankkontonummer (for alle land)",
+      "navnEN": "Notification of new bank account number (for all countries)",
+      "hovedskjema": "NAV 95-20.00",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjonskrav - sykepenger i arbeidsgiverperioden (små bedrifter)",
+      "navn": "Forsikring mot ansvar for sykepenger i arbeidsgiverperioden for små bedrifter - krav om refusjon",
+      "navnEN": "Forsikring mot ansvar for sykepenger i arbeidsgiverperioden for små bedrifter - krav om refusjon",
+      "hovedskjema": "NAV 08-21.15",
+      "tema": "FOS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjon av reiseutgifter i stedet for sykepenger",
+      "navn": "Søknad om refusjon av reisetilskudd til arbeidsreiser (for arbeidsgiver)",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-14.01",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjonskrav lønnstilskudd",
+      "navn": "Refusjonskrav lønnstilskudd",
+      "navnEN": "Refusjonskrav lønnstilskudd",
+      "hovedskjema": "NAV 76-13.20",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjonskrav - inkluderingstilskudd",
+      "navn": "Refusjonskrav - inkluderingstilskudd",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.89",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjonskrav - utført lese- og sekretærhjelp for blinde og svaksynte",
+      "navn": "Regning for lese- og sekretærhjelp for blinde og svaksynte",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.09",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjonskrav - mentor",
+      "navn": "Refusjonskrav - mentor",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.85",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjonskrav - funksjonsassistanse",
+      "navn": "Refusjonskrav - Funksjonsassistanse",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.81",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjonskrav - varig tilrettelagt arbeid (VTA) i ordinær virksomhet",
+      "navn": "Refusjonskrav – Varig tilrettelagt arbeid (VTA) i ordinær virksomhet",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.54",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjon av sykepenger i arbeidsgiverperioden – kronisk sykdom / svangerskap",
+      "navn": "Krav fra arbeidsgiveren om refusjon av sykepenger utbetalt i arbeidsgiverperioden til en arbeidstaker som er unntatt fra arbeidsgiveransvar på grunn av kronisk sykdom",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-20.12",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjon av sykepenger i arbeidsgiverperioden – kronisk sykdom / svangerskap",
+      "navn": "Krav fra arbeidsgiveren om refusjon av sykepenger utbetalt i arbeidsgiverperioden til en arbeidstaker som er unntatt fra arbeidsgiveransvar på grunn av sykdom som er forårsaket av svangerskap",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-20.12",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjonskrav til ekspertbistand",
+      "navn": "Refusjonskrav til ekspertbistand",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.90",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Refusjonskrav fra arbeidsgivere",
+      "underkategori": "Refusjon av utbetalte omsorgspenger til arbeidstaker",
+      "navn": "Inntektsmelding for arbeidstaker som skal ha pleie-/opplæringspenger og omsorgspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-30.01",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "For tiltaksarrangør / leverandør",
+      "underkategori": "Fremmøteskjema ved deltakelse på AMO-kurs og jobbklubb",
+      "navn": "Fremmøteskjema ved deltakelse på kurs",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.48",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "For tiltaksarrangør / leverandør",
+      "underkategori": "Refusjonskrav - arbeidsforberedende trening og varig tilrettelagt arbeid",
+      "navn": "Refusjonskrav – AFT og VTA i skjermet virksomhet",
+      "navnEN": "Refusjonskrav – AFT og VTA i skjermet virksomhet",
+      "hovedskjema": "NAV 76-13.53",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "For tiltaksarrangør / leverandør",
+      "underkategori": "Refusjonskrav - kvalifisering og tilrettelagt arbeid i AMB",
+      "navn": "Refusjonskrav - kvalifisering og tilrettelagt arbeid i AMB",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.60",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "For tiltaksarrangør / leverandør",
+      "underkategori": "Refusjonskrav - opplæring",
+      "navn": "Refusjonskrav - opplæring",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.18",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "For tiltaksarrangør / leverandør",
+      "underkategori": "Førsteside til individrapporter / planer",
+      "navn": "Individrapporter / planer",
+      "navnEN": "Individrapporter / planer",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "OPP",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "For tiltaksarrangør / leverandør",
+      "underkategori": "Førsteside til deltakerlister",
+      "navn": "Deltakerlister",
+      "navnEN": "Deltakerlister",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "For tiltaksarrangør / leverandør",
+      "underkategori": "Førsteside til resultatrapporter / evalueringsrapporter / årsrapporter",
+      "navn": "Resultatrapporter / evalueringsrapporter / årsrapporter",
+      "navnEN": "Resultatrapporter / evalueringsrapporter / årsrapporter",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "For tiltaksarrangør / leverandør",
+      "underkategori": "Førsteside til faktura fra tiltaksarrangør",
+      "navn": "Faktura fra tiltaksarrangør",
+      "navnEN": "Faktura fra tiltaksarrangør",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Tilskudd og tiltak hos arbeidsgiver",
+      "underkategori": "Funksjonsassistanse",
+      "navn": "Søknad om funksjonsassistanse",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.80",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Tilskudd og tiltak hos arbeidsgiver",
+      "underkategori": "Søknadsskjema VTA ordinær",
+      "navn": "Søknad og avtale om tiltaksplass for varig tilrettelagt arbeid i ordinær virksomhet",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.72",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Tilskudd og tiltak hos arbeidsgiver",
+      "underkategori": "Fremmøteliste ved deltakelse på arbeidstrening",
+      "navn": "Fremmøteliste ved deltakelse på arbeidstrening",
+      "navnEN": "Fremmøteliste ved deltakelse på arbeidstrening",
+      "hovedskjema": "NAV 76-13.16",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Tilskudd og tiltak hos arbeidsgiver",
+      "underkategori": "Søknad om tilskudd til ekspertbistand"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsopplysninger for arbeidstaker - sykepenger",
+      "navn": "Inntektsopplysninger for arbeidstaker som skal ha sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-30.01",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsopplysninger for arbeidstaker - foreldre- og svangerskapspenger",
+      "navn": "Inntektsopplysninger for arbeidstaker som skal ha foreldre-og svangerskapspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-30.01",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsmelding for arbeidstaker - pleie-/opplæringspenger og omsorgspenger",
+      "navn": "Inntektsmelding for arbeidstaker som skal ha pleie-/opplæringspenger og omsorgspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-30.01",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha sykepenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-35.01",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha foreldrepenger eller svangerskapspenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og frilansere som skal ha foreldrepenger eller svangerskapspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 14-35.01",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha omsorgs-, opplærings- eller pleiepenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha opplæringspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-35.01",
+      "tema": "OMS",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Trekkopplysninger for arbeidstaker",
+      "navn": "Trekkopplysninger for arbeidstaker som skal ha: sykepenger, foreldrepenger, svangerskapspenger, pleie-/opplæringspenger og omsorgspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-30.02",
+      "tema": "TRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsskjema for arbeidstaker - uføretrygd",
+      "navn": "Inntektsskjema for arbeidstakere - uføretrygd",
+      "navnEN": "Income Form for Employees - disability benefit",
+      "hovedskjema": "NAV 12-06.06",
+      "tema": "UFO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsskjema for næringsdrivende og ansatt i eget aksjeselskap - uføretrygd",
+      "navn": "Inntektsskjema for næringsdrivende og ansatt i eget aksjeselskap - uføretrygd",
+      "navnEN": "Income Form for Self-Employed Persons and Employee Of Own Limited Company - disabilty benefit",
+      "hovedskjema": "NAV 12-06.07",
+      "tema": "UFO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Inntekt og trekk",
+      "underkategori": "Inntektsskjema for gårdbrukere - uføretrygd",
+      "navn": "Inntektsskjema for gårdbrukere - uføretrygd",
+      "navnEN": "Income form for farmers - disability benefit",
+      "hovedskjema": "NAV 12-06.09",
+      "tema": "UFO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Lønnsgaranti - Arbeidsgiver betaler ikke ut lønn",
+      "navn": "Søknad om lønnsgarantidekning - melding av lønnskrav m.v. til konkursboet",
+      "navnEN": "Application for wage guarantee - Notification of wage claims etc. to the bankrupt estate",
+      "hovedskjema": "NAV 67-01.01",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Fullmaktskjema",
+      "navn": "Generell fullmakt",
+      "navnEN": "Power of attorney",
+      "hovedskjema": "NAV 95-15.36",
+      "tema": "FUL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endring av bankkontonummer",
+      "navn": "Melding om nytt bankkontonummer (for norsk kontonummer)",
+      "navnEN": "Notification of new bank account number (for Norwegian account number)",
+      "hovedskjema": "NAV 95-20.00",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endring av bankkontonummer",
+      "navn": "Skjema for bankopplysninger i Europa",
+      "navnEN": "Bank information form for Europe",
+      "hovedskjema": "NAV 95-00.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endring av bankkontonummer",
+      "navn": "Skjema for bankopplysninger – USA",
+      "navnEN": "Bank information form – USA",
+      "hovedskjema": "NAV 95-00.06",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endring av bankkontonummer",
+      "navn": "Skjema for bankopplysninger – Australia",
+      "navnEN": "Bank information form – Australia",
+      "hovedskjema": "NAV 95-00.09",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endring av bankkontonummer",
+      "navn": "Skjema for bankopplysninger – Canada",
+      "navnEN": "Bank information form – Canada",
+      "hovedskjema": "NAV 95-00.11",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endring av bankkontonummer",
+      "navn": "Skjema for bankopplysninger - utland generelt",
+      "navnEN": "Bank information form - abroad in general",
+      "hovedskjema": "NAV 95-00.15",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endring av bankkontonummer",
+      "navn": "Skjema for bankopplysninger – Mexico",
+      "navnEN": "Bank information form – Mexico",
+      "hovedskjema": "NAV 95-00.17",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endring av bankkontonummer",
+      "navn": "Skjema for bankopplysninger – Sør-Afrika",
+      "navnEN": "Bank information form – South Africa",
+      "hovedskjema": "NAV 95-00.19",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Endre skattetrekk",
+      "navn": "Tilleggstrekk skatt",
+      "navnEN": "",
+      "hovedskjema": "NAV 95-20.02",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Oppfølging",
+      "navn": "Oppfølging bistand",
+      "navnEN": "Oppfølging bistand",
+      "hovedskjema": "NAV 00-01.00",
+      "tema": "OPP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Diverse dokumentasjon",
+      "navn": "Diverse dokumentasjon",
+      "navnEN": "Miscellaneous documentation",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Feilutbetalinger",
+      "navn": "Feilutbetalinger",
+      "navnEN": "Feilutbetalinger",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "FEI",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Meldekort",
+      "navn": "Meldekort",
+      "navnEN": "",
+      "hovedskjema": "NAV 00-10.01",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Reisekostnader ved samvær",
+      "navn": "Fordeling av barns reisekostnader ved samvær",
+      "navnEN": "",
+      "hovedskjema": "NAV 55-44.01",
+      "tema": "BID",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Tilleggsstønader",
+      "navn": "Søknad om tilleggsstønader",
+      "navnEN": "",
+      "hovedskjema": "NAV 11-12.14",
+      "tema": "TSO",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Klage og tilbakemelding",
+      "underkategori": "Klage og tilbakemelding"
+    },
+    {
+      "kategori": "Permitteringer, oppsigelser og konkurs",
+      "underkategori": "Opplysninger om boet og kravene",
+      "navn": "Opplysninger om boet og kravene (Den statlige lønnsgarantiordning)",
+      "navnEN": "",
+      "hovedskjema": "NAV 67-01.03",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Permitteringer, oppsigelser og konkurs",
+      "underkategori": "Bekreftelse på sluttårsak/nedsatt arbeidstid (ikke permittert) ",
+      "navn": "Bekreftelse på sluttårsak/nedsatt arbeidstid (ikke permittert)",
+      "navnEN": "",
+      "hovedskjema": "NAV 04-08.03",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Permitteringer, oppsigelser og konkurs",
+      "underkategori": "Bekreftelse på arbeidsforhold og permittering",
+      "navn": "Bekreftelse på arbeidsforhold og permittering",
+      "navnEN": "Confirmation of employment and lay-off",
+      "hovedskjema": "NAV 04-08.04",
+      "tema": "DAG",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Sykmelding (for lege)",
+      "underkategori": "EØS - detaljert legeerklæring",
+      "navn": "EØS - detaljert legeerklæring",
+      "navnEN": "Detailed Medical Report",
+      "hovedskjema": "NAV 45-12.00",
+      "tema": "UFO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Sykmelding (for lege)",
+      "underkategori": "Legeerklæring ved arbeidsuførhet",
+      "navn": "Legeerklæring ved arbeidsuførhet",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-07.08",
+      "tema": "OPP",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnebidrag og bidragsforskudd",
+      "navn": "Avtale om barnebidrag",
+      "navnEN": "Agreement on child support",
+      "hovedskjema": "NAV 55-00.60",
+      "tema": "BID",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnebidrag og bidragsforskudd",
+      "navn": "Avtale om barnebidrag for barn over 18 år",
+      "navnEN": "Agreement on child support for child over 18 years old",
+      "hovedskjema": "NAV 55-00.63",
+      "tema": "BID",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnebidrag og bidragsforskudd",
+      "navn": "Søknadsskjema for bidragsmottaker",
+      "navnEN": "Application form for custodial parent",
+      "hovedskjema": "NAV 54-00.05",
+      "tema": "BID",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnebidrag og bidragsforskudd",
+      "navn": "Søknadsskjema for bidragspliktig",
+      "navnEN": "Application form for non-custodial parent",
+      "hovedskjema": "NAV 54-00.08",
+      "tema": "BID",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnebidrag og bidragsforskudd",
+      "navn": "Svar på forhåndsvarsel i sak om barnebidrag (bidragsmottaker)",
+      "navnEN": " Response to advance notice regarding child support form for custodial parent",
+      "hovedskjema": "NAV 54-00.04",
+      "tema": "BID",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnebidrag og bidragsforskudd",
+      "navn": "Svar på forhåndsvarsel i sak om barnebidrag (bidragspliktig)",
+      "navnEN": "Response to advance notice regarding child support form for non-custodial parent",
+      "hovedskjema": "NAV 54-00.07",
+      "tema": "BID",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnebidrag og bidragsforskudd",
+      "navn": "Søknad om bidrag til særlige utgifter",
+      "navnEN": "Application for extraordinary child support",
+      "hovedskjema": "NAV 54-00.13",
+      "tema": "BID",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnebidrag og bidragsforskudd",
+      "navn": "Søknad om sletting av bidragsgjeld",
+      "navnEN": "Application for cancellation of child support debt",
+      "hovedskjema": "NAV 54-00.11",
+      "tema": "BID",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnetrygd",
+      "navn": "Søknad om barnetrygd ordinær",
+      "navnEN": "Application for child benefit",
+      "hovedskjema": "NAV 33-00.07",
+      "tema": "BAR",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnetrygd",
+      "navn": "Søknad om utvidet barnetrygd",
+      "navnEN": "Application for extended child benefit",
+      "hovedskjema": "NAV 33-00.09",
+      "tema": "BAR",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Barnetrygd",
+      "navn": "Tilleggsskjema ved krav om utbetaling av barnetrygd og/eller kontantstøtte på grunnlag av regler om eksport etter EØS-avtalen",
+      "navnEN": "Supplementary form for claims for payment of child benefit and/or cash benefit based on export rules under the EEA Agreement",
+      "hovedskjema": "NAV 34-00.15",
+      "tema": "BAR",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Kontantstøtte",
+      "navn": "Søknad om kontantstøtte til småbarnsforeldre",
+      "navnEN": "Form for cash-for-care benefit",
+      "hovedskjema": "NAV 34-00.08",
+      "tema": "KON",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Ektefellebidrag",
+      "navn": "Søknad om ektefellebidrag",
+      "navnEN": "Application for spousal support",
+      "hovedskjema": "NAV 53-00.05",
+      "tema": "BID",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Enslig mor eller far",
+      "navn": "Søknad om overgangsstønad - enslig mor eller far",
+      "navnEN": "Application for transitional benefit - single mother or father",
+      "hovedskjema": "NAV 15-00.01",
+      "tema": "ENF",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Enslig mor eller far",
+      "navn": "Enslig mor eller far som er arbeidssøker",
+      "navnEN": "Single mother or father who is a jobseeker",
+      "hovedskjema": "NAV 15-08.01",
+      "tema": "ENF",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Enslig mor eller far",
+      "navn": "Søknad om stønad til barnetilsyn - enslig mor eller far i arbeid",
+      "navnEN": "Application for child care benefit for single mother or father when working",
+      "hovedskjema": "NAV 15-00.02",
+      "tema": "ENF",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Enslig mor eller far",
+      "navn": "Søknad om skolepenger - enslig mor eller far",
+      "navnEN": "Application for support for tuition fees for education - single mother or father",
+      "hovedskjema": "NAV 15-00.04",
+      "tema": "ENF",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Kjøreliste for godkjent bruk av egen bil",
+      "navn": "Kjøreliste for godkjent bruk av egen bil",
+      "navnEN": "",
+      "hovedskjema": "NAV 00-01.01",
+      "tema": "TSO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Oppfostringsbidrag",
+      "navn": "Skjema for oppfostringsbidrag etter lov om barneverntjenester - for bidragspliktig",
+      "navnEN": "Form for fostering contributions pursuant to Child Welfare Act - for non-custodial parent",
+      "hovedskjema": "NAV 57-00.08",
+      "tema": "BID",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Oppfostringsbidrag",
+      "navn": "Krav i forbindelse med oppfostringsbidrag etter barnevernloven (For kommunen)",
+      "navnEN": "",
+      "hovedskjema": "NAV 57-00.05",
+      "tema": "BID",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Omsorgspenger",
+      "navn": "Søknad om utbetaling av omsorgspenger for selvstendig næringsdrivende og frilansere",
+      "navnEN": "Søknad om utbetaling av omsorgspenger for selvstendig næringsdrivende og frilansere",
+      "hovedskjema": "NAV 09-06.01",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Omsorgspenger",
+      "navn": "Søknad om ekstra omsorgsdager for et barn som er kronisk sykt, funksjonshemmet eller langvarig sykt",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-06.05",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Omsorgspenger",
+      "navn": "Søknad om ekstra omsorgsdager når den andre forelderen ikke kan ha tilsyn med barn",
+      "navnEN": "Søknad om ekstra omsorgsdager når den andre forelderen ikke kan ha tilsyn med barn",
+      "hovedskjema": "NAV 09-06.07",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Omsorgspenger",
+      "navn": "Søknad om ekstra omsorgsdager ved aleneomsorg",
+      "navnEN": "Søknad om ekstra omsorgsdager ved aleneomsorg",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Omsorgspenger",
+      "navn": "Søknad om utbetaling av omsorgspenger når arbeidsgiver ikke utbetaler",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-09.01",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Pleiepenger og opplæringspenger",
+      "navn": "Søknad om pleiepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-11.05",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Pleiepenger og opplæringspenger",
+      "navn": "Søknad om opplæringspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-11.08",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Pleiepenger og opplæringspenger",
+      "navn": "Søknad om pleiepenger i livets sluttfase",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-12.05",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Pleiepenger og opplæringspenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha opplæringspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-35.01",
+      "tema": "OMS",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Foreldrepenger, engangsstønad og svangerskapspenger",
+      "navn": "Søknad om foreldrepenger ved fødsel",
+      "navnEN": "Application for parental benefit in connection with birth",
+      "hovedskjema": "NAV 14-05.09",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Foreldrepenger, engangsstønad og svangerskapspenger",
+      "navn": "Søknad om engangsstønad ved fødsel",
+      "navnEN": "Application for lump-sum grant at birth",
+      "hovedskjema": "NAV 14-05.07",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Foreldrepenger, engangsstønad og svangerskapspenger",
+      "navn": "Søknad om foreldrepenger ved adopsjon",
+      "navnEN": "Application for parental benefit for an adoption",
+      "hovedskjema": "NAV 14-05.06",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Foreldrepenger, engangsstønad og svangerskapspenger",
+      "navn": "Søknad om engangsstønad ved adopsjon",
+      "navnEN": "Application for a lump-sum grant upon an adoption",
+      "hovedskjema": "NAV 14-05.08",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Foreldrepenger, engangsstønad og svangerskapspenger",
+      "navn": "Søknad om endring eller nytt uttak av foreldrepenger",
+      "navnEN": "Application for change or new withdrawal of parental benefit",
+      "hovedskjema": "NAV 14-16.05",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Foreldrepenger, engangsstønad og svangerskapspenger",
+      "navn": "Søknad om svangerskapspenger til selvstendig næringsdrivende og frilanser",
+      "navnEN": "Application for pregnancy allowance to self-employed and freelancers",
+      "hovedskjema": "NAV 14-04.10",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Foreldrepenger, engangsstønad og svangerskapspenger",
+      "navn": "Søknad om svangerskapspenger for arbeidstakere",
+      "navnEN": " Application for pregnancy allowance for employes",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Selvstendig næringsdrivende og frilansere med foreldrepenger eller svangerskapspenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og frilansere som skal ha foreldrepenger eller svangerskapspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 14-35.01",
+      "tema": "FOR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Farskapserklæring"
+    },
+    {
+      "kategori": "Familie og barn",
+      "underkategori": "Reisekostnader ved samvær"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Inntektsopplysninger for arbeidstaker – ordinære sykepenger",
+      "navn": "Inntektsopplysninger for arbeidstaker som skal ha sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-30.01",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Refusjon av reiseutgifter i stedet for sykepenger",
+      "navn": "Søknad om refusjon av reisetilskudd til arbeidsreiser (for arbeidsgiver)",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-14.01",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha sykepenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-35.01",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Forsikring mot ansvar for sykepenger i arbeidsgiverperioden for små bedrifter",
+      "navn": "Forsikring mot ansvar for sykepenger i arbeidsgiverperioden for små bedrifter",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-21.05 ",
+      "tema": "FOS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Refusjonskrav - sykepenger i arbeidsgiverperioden (små bedrifter)",
+      "navn": "Forsikring mot ansvar for sykepenger i arbeidsgiverperioden for små bedrifter - krav om refusjon",
+      "navnEN": "Forsikring mot ansvar for sykepenger i arbeidsgiverperioden for små bedrifter - krav om refusjon",
+      "hovedskjema": "NAV 08-21.15",
+      "tema": "FOS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Oppfølgingsplan for sykmeldte",
+      "navn": "Oppfølgingsplan ved sykmelding",
+      "navnEN": "",
+      "hovedskjema": "NAV 25-02.01",
+      "tema": "OPP",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Refusjon av sykepenger i arbeidsgiverperioden – kronisk sykdom / svangerskap",
+      "navn": "Krav fra arbeidsgiveren om refusjon av sykepenger utbetalt i arbeidsgiverperioden til en arbeidstaker som er unntatt fra arbeidsgiveransvar på grunn av kronisk sykdom",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-20.12",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Refusjon av sykepenger i arbeidsgiverperioden – kronisk sykdom / svangerskap",
+      "navn": "Krav fra arbeidsgiveren om refusjon av sykepenger utbetalt i arbeidsgiverperioden til en arbeidstaker som er unntatt fra arbeidsgiveransvar på grunn av sykdom som er forårsaket av svangerskap",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-20.12",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Sykepenger - diverse",
+      "navn": "Sykepenger - bestride sykmelding",
+      "navnEN": "Sickness benefit - dispute sick leave",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Sykepenger",
+      "underkategori": "Søknad om sykepenger",
+      "navn": "Søknad om sykepenger ",
+      "navnEN": "Application for sickness benefit",
+      "hovedskjema": "NAV 08-07.04D",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Arbeids- og utdanningsreiser",
+      "navn": "Søknad om stønad til arbeids- og utdanningsreiser",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-00.42",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bytte av hjelpemiddel",
+      "navn": "Bytte av hjelpemiddel (for hjelpemiddelformidlere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.31",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bestillingsordningen",
+      "navn": "Bestilling av tekniske hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.05",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bevegelse",
+      "navn": "Søknad om hjelpemidler til bevegelse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bevegelse",
+      "navn": "Søknad om hjelpemidler til bevegelse (for hjelpemiddelformidlere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bevegelse",
+      "navn": "Hjelp til vurdering og utprøving (bevegelse)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bil (motorkjøretøy)",
+      "navn": "Søknad om stønad til anskaffelse av motorkjøretøy og / eller spesialutstyr og tilpassing til bil",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.40",
+      "tema": "BIL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bil (motorkjøretøy)",
+      "navn": "Søknad om refusjon av reiseutgifter i forbindelse med bilstønadsordningen",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.17",
+      "tema": "BIL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bil (motorkjøretøy)",
+      "navn": "Legeerklæring for motorkjøretøy",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.42",
+      "tema": "BIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Bil (motorkjøretøy)",
+      "navn": "Tilleggsskjema fra ergo- eller fysioterapeut i forbindelse med søknad om motorkjøretøy og spesialutstyr / tilpasning",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.43",
+      "tema": "BIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Folkehøyskole",
+      "navn": "Søknad om stønad til ekstrautgifter på folkehøyskole",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.24",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Hjelp til vurdering og utprøving (hørsel)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om hjelpemidler (hørsel)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om hjelpemidler til hørsel (for hjelpemiddelformidlere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om tolk til døve, døvblinde og hørselshemmede",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.06",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om høreapparat / tinnitusmaskerer / tilleggsutstyr",
+      "navnEN": "Søknad om høreapparat / tinnitusmaskerer / tilleggsutstyr",
+      "hovedskjema": "NAV 10-07.08",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Bekreftelse på utlån og tildeling av høreapparat / tinnitusmaskerer / tilleggsutstyr​",
+      "navnEN": "Bekreftelse på utlån og tildeling av høreapparat / tinnitusmaskerer / tilleggsutstyr​",
+      "hovedskjema": "NAV 10-07.80",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Hørsel",
+      "navn": "Søknad om stønad til tilpasningskurs",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.18",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kommunikasjon",
+      "navn": "Søknad om hjelpemidler til kommunikasjon",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kommunikasjon",
+      "navn": "Hjelp til vurdering og utprøving (kommunikasjon og kognisjon)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om refusjon av reiseutgifter knyttet til ortopediske hjelpemidler, parykk, tilpasningskurs, folkehøyskole, grunnmønster eller brystprotese",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.16",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om stønad til parykk",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.57",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om stønad til øyeprotese eller ansiktsprotese",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.58",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om stønad til brystprotese eller spesialbrystholder",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.59",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om stønad til alminnelig fottøy ved ulik fotstørrelse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.60",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Søknad om refusjon av betalt egenandel for fottøy, fotseng og høreapparat ved yrkesskade",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.61",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": "Innsending av førstegangssøknad om ortopedisk hjelpemiddel",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.11",
+      "tema": "HEL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Ortopediske hjelpemidler",
+      "navn": " Innsending av søknad om fornyelse av ortopedisk hjelpemiddel",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.13",
+      "tema": "HEL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om hjelpemidler (syn)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Hjelp til vurdering og utprøving (syn)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om tolk til døve, døvblinde og hørselshemmede",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.06",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om stønad til tilpasningskurs",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.18",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om briller til behandling og/eller forebygging av amblyopi",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.14",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om lese- og sekretærhjelp for blinde og svaksynte",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.30",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Regning for lese- og sekretærhjelp for blinde og svaksynte",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.09",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Tilskudd ved kjøp av briller til barn",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.34",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Syn",
+      "navn": "Søknad om dekning av utgifter til irislinse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.15",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Førerhund og servicehund",
+      "navn": " Søknad om førerhund",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.50",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Førerhund og servicehund",
+      "navn": "Søknad om dekning av ekstraordinære veterinærutgifter for førerhund",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.53",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Førerhund og servicehund",
+      "navn": "Søknad om servicehund",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.54",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Seksualtekniske hjelpemidler",
+      "navn": "Seksualteknisk hjelpemiddel",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-06.06",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Reiseutgifter",
+      "navn": "Søknad om refusjon av reiseutgifter - tekniske hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.19",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Reiseutgifter",
+      "navn": "Søknad om refusjon av reiseutgifter knyttet til ortopediske hjelpemidler, parykk, tilpasningskurs, folkehøyskole, grunnmønster eller brystprotese",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.16",
+      "tema": "HEL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Reiseutgifter",
+      "navn": "Søknad om refusjon av reiseutgifter i forbindelse med bilstønadsordningen",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.17",
+      "tema": "BIL",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Søknad om hjelpemidler PC eller nettbrett",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Fullmakt i forbindelse med søknad om hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.04",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Behov for hjelpemidler knyttet til individuell plan",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.23",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Søknad om stønad til grunnmønster og søm etter grunnmønster",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.55",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Diverse",
+      "navn": "Innlevering av tekniske hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.63",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Tilrettelegging av arbeidsplass",
+      "navn": "Søknad om tekniske hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Tilrettelegging av arbeidsplass",
+      "navn": "Hjelp til vurdering og utprøving av hjelpemidler på arbeidsplassen",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Fullmakt i forbindelse med søknad om tekniske hjelpemidler",
+      "navn": "Fullmakt i forbindelse med søknad om hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.04",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Tilskudd til rimelige hjelpemidler",
+      "navn": "Søknad om tilskudd til rimelige hjelpemidler",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "PC eller nettbrett",
+      "navn": "Søknad om hjelpemidler PC eller nettbrett",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "PC eller nettbrett",
+      "navn": "Hjelp til vurdering og utprøving (kommunikasjon og kognisjon)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kognisjon",
+      "navn": "Søknad om hjelpemidler ved kognitiv funksjonsnedsettelse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kognisjon",
+      "navn": "Søknad om hjelpemidler ved kognitiv funksjonsnedsettelse (for hjelpemiddelformidlere)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Kognisjon",
+      "navn": "Hjelp til vurdering og utprøving (kommunikasjon og kognisjon)",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.20",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Hjelpemidler og tilrettelegging",
+      "underkategori": "Søknad om hjelpemidler",
+      "navn": "Søknad om hjelpemidler",
+      "navnEN": "Søknad om hjelpemidler",
+      "hovedskjema": "NAV 10-07.03",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Barnepensjon for barn som har mistet én eller begge foreldrene",
+      "navn": "Søknad om barnepensjon når en forelder er død",
+      "navnEN": "Application for children’s pension when one parent has died",
+      "hovedskjema": "NAV 18-04.01",
+      "tema": "PEN",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Barnepensjon for barn som har mistet én eller begge foreldrene",
+      "navn": "Søknad om barnepensjon for foreldreløse barn",
+      "navnEN": "Claim for children’s pension for orphaned children",
+      "hovedskjema": "NAV 18-01.05",
+      "tema": "PEN",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Barnepensjon for barn som har mistet én eller begge foreldrene",
+      "navn": "Søknad om barnepensjon etter fylte 18 år",
+      "navnEN": "Application for children’s pension after reaching 18 years of age",
+      "hovedskjema": "NAV 18-04.05",
+      "tema": "PEN",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Familiepleier",
+      "navn": "Søknad om ytelser til tidligere familiepleier",
+      "navnEN": "",
+      "hovedskjema": "NAV 16-01.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Familiepleier",
+      "navn": "Søknad om stønad til barnetilsyn på grunn av arbeid og stønad til skolepenger til gjenlevende ektefelle/partner/ samboer og til ugift familiepleier",
+      "navnEN": "",
+      "hovedskjema": "NAV 17-09.01",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Gjenlevende ektefelle, partner eller samboer",
+      "navn": "Søknad om ytelser til gjenlevende ektefelle/partner/samboer og gjenlevende barn",
+      "navnEN": "Application for benefits for surviving spouse, partner or cohabitant and surviving children",
+      "hovedskjema": "NAV 17-01.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Gjenlevende ektefelle, partner eller samboer",
+      "navn": "Søknad om stønad til barnetilsyn på grunn av arbeid og stønad til skolepenger til gjenlevende ektefelle/partner/ samboer og til ugift familiepleier",
+      "navnEN": "",
+      "hovedskjema": "NAV 17-09.01",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Gravferdsstønad og båretransport",
+      "navn": "Søknad om gravferdsstønad og båretransport",
+      "navnEN": "",
+      "hovedskjema": "NAV 07-02.08",
+      "tema": "GRA",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Stønader ved dødsfall",
+      "underkategori": "Utvidet barnetrygd",
+      "navn": "Søknad om utvidet barnetrygd",
+      "navnEN": "Application for extended child benefit",
+      "hovedskjema": "NAV 33-00.09",
+      "tema": "BAR",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Skjema for arbeidsgiver som sender en arbeidstaker på midlertidig oppdrag i et annet EØS-land eller Sveits",
+      "navn": "Skjema for arbeidsgiver som sender en arbeidstaker på midlertidig oppdrag til et annet EØS-land eller Sveits ",
+      "navnEN": "Form for employer who sends an employee on temporary assignment to another EEA country or Switzerland",
+      "hovedskjema": "NAV 02-08.08",
+      "tema": "MED",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Skjema for arbeidsgiver - bekreftelse på utsending utenfor EØS NAV 02-08.06"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Melding til NAV om elevs fravær fra skolen som kan skyldes utenlandsopphold",
+      "navn": "Melding til NAV om elevs fravær fra skolen som kan skyldes utenlandsopphold ",
+      "navnEN": "",
+      "hovedskjema": "NAV 21-04.05",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Melding om institusjonsopphold",
+      "navn": "Melding om institusjonsopphold",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-54.05",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Krav i forbindelse med oppfostringsbidrag etter barnevernloven (For kommunen)",
+      "navn": "Krav i forbindelse med oppfostringsbidrag etter barnevernloven (For kommunen)",
+      "navnEN": "",
+      "hovedskjema": "NAV 57-00.05",
+      "tema": "BID",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Diverse dokumentasjon",
+      "navn": "Diverse dokumentasjon",
+      "navnEN": "Miscellaneous documentation",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Diverse",
+      "underkategori": "Melding om opphold på helseinstitusjon",
+      "navn": "Melding om opphold på helseinstitusjon",
+      "navnEN": "Notification of stay at a health institution",
+      "hovedskjema": "NAV 70-02.05",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Alderspensjon og avtalefestet pensjon (AFP) i privat sektor",
+      "navn": "Søknad om alderspensjon",
+      "navnEN": "Application for retirement pension",
+      "hovedskjema": "NAV 19-01.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Alderspensjon og avtalefestet pensjon (AFP) i privat sektor",
+      "navn": "Endring av alderspensjon",
+      "navnEN": "Changing your retirement pension",
+      "hovedskjema": "NAV 19-01.10",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Avtalefestet pensjon (AFP) fra Statens pensjonskasse",
+      "navn": "Opplysninger fra arbeidstaker til NAV ved søknad om avtalefestet pensjon (AFP) fra Statens pensjonskasse",
+      "navnEN": "Application for contractual pension from The Norwegian Public Service Pension Fund",
+      "hovedskjema": "NAV 62-00.16",
+      "tema": "PEN",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Avtalefestet pensjon (AFP) fra Statens pensjonskasse",
+      "navn": "Skjema for tilbakemelding til NAV om inntekt som skal holdes utenfor etteroppgjøret for avtalefestet pensjon (AFP)",
+      "navnEN": "",
+      "hovedskjema": "NAV 62-03.01",
+      "tema": "PEN",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Overføring av omsorgsopptjening for barn",
+      "navn": "Overføring av omsorgsopptjening",
+      "navnEN": "Transferring acquired rights for care work",
+      "hovedskjema": "NAV 03-16.10",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Godskriving av omsorgsopptjening",
+      "navn": "Søknad om pensjonsopptjening for omsorgsarbeid",
+      "navnEN": "",
+      "hovedskjema": "NAV 03-16.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Godskriving av omsorgsopptjening",
+      "navn": "Søknad om godskriving av omsorgsopptjening",
+      "navnEN": "Søknad om godskriving av omsorgsopptjening",
+      "hovedskjema": "NAV 03-16.01",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Barnepensjon for barn som har mistet én eller begge foreldrene",
+      "navn": "Søknad om barnepensjon når en forelder er død",
+      "navnEN": "Application for children’s pension when one parent has died",
+      "hovedskjema": "NAV 18-04.01",
+      "tema": "PEN",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Barnepensjon for barn som har mistet én eller begge foreldrene",
+      "navn": "Søknad om barnepensjon for foreldreløse barn",
+      "navnEN": "Claim for children’s pension for orphaned children",
+      "hovedskjema": "NAV 18-01.05",
+      "tema": "PEN",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Barnepensjon for barn som har mistet én eller begge foreldrene",
+      "navn": "Søknad om barnepensjon etter fylte 18 år",
+      "navnEN": "Application for children’s pension after reaching 18 years of age",
+      "hovedskjema": "NAV 18-04.05",
+      "tema": "PEN",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Familiepleier",
+      "navn": "Søknad om ytelser til tidligere familiepleier",
+      "navnEN": "",
+      "hovedskjema": "NAV 16-01.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Familiepleier",
+      "navn": "Søknad om stønad til barnetilsyn på grunn av arbeid og stønad til skolepenger til gjenlevende ektefelle/partner/ samboer og til ugift familiepleier",
+      "navnEN": "",
+      "hovedskjema": "NAV 17-09.01",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Gjenlevende ektefelle, partner eller samboer",
+      "navn": "Søknad om ytelser til gjenlevende ektefelle/partner/samboer og gjenlevende barn",
+      "navnEN": "Application for benefits for surviving spouse, partner or cohabitant and surviving children",
+      "hovedskjema": "NAV 17-01.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Gjenlevende ektefelle, partner eller samboer",
+      "navn": "Søknad om stønad til barnetilsyn på grunn av arbeid og stønad til skolepenger til gjenlevende ektefelle/partner/ samboer og til ugift familiepleier",
+      "navnEN": "",
+      "hovedskjema": "NAV 17-09.01",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Kjøreliste for godkjent bruk av egen bil",
+      "navn": "Kjøreliste for godkjent bruk av egen bil",
+      "navnEN": "",
+      "hovedskjema": "NAV 00-01.01",
+      "tema": "TSO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Krigspensjon",
+      "navn": "Krigspensjoneringen - Krav om invalidepensjon",
+      "navnEN": "",
+      "hovedskjema": "NAV 31-00.02",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Krigspensjon",
+      "navn": "Krigspensjoneringen - Krav om etterlattepensjon",
+      "navnEN": "",
+      "hovedskjema": "NAV 31-00.03",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Innleggelse i aldershjem/sykehjem",
+      "navn": "Innleggelse i aldershjem/sykehjem",
+      "navnEN": "",
+      "hovedskjema": "NAV 70-02.03",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Honnørkort - uføretrygd fra et annet EØS-land",
+      "navn": "Bekreftelse på vedtak om uføretrygd for utstedelse av honnørkort",
+      "navnEN": "Confirmation of decision on disability benefit in order to receive a concessionary card",
+      "hovedskjema": "NAV 12-06.15",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Leveattest",
+      "navn": "Leveattest",
+      "navnEN": "Life certificate",
+      "hovedskjema": "NAV 21-03.05",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Supplerende stønad til personer over 67 år",
+      "navn": "Søknad om supplerende stønad til personer over 67 år",
+      "navnEN": "Application for supplementary benefit to persons over 67 years",
+      "hovedskjema": "NAV 64-21.00",
+      "tema": "SUP",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Pensjon",
+      "underkategori": "Supplerende stønad til ufør flyktning",
+      "navn": "Supplerende stønad til ufør flyktning",
+      "navnEN": "Supplerende stønad til ufør flyktning",
+      "hovedskjema": "NAV 64-01.00",
+      "tema": "SUP",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Arbeidsavklaringspenger (AAP)",
+      "navn": "Søknad om arbeidsavklaringspenger",
+      "navnEN": "Application for work assessment allowance",
+      "hovedskjema": "NAV 11-13.05",
+      "tema": "AAP",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Arbeidsavklaringspenger (AAP)",
+      "navn": "Søknad om å beholde arbeidsavklaringspenger under opphold i utlandet",
+      "navnEN": "",
+      "hovedskjema": "NAV 11-03.07",
+      "tema": "AAP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Arbeidsavklaringspenger (AAP)",
+      "navn": "Søknad om reisestønad (AAP)",
+      "navnEN": "",
+      "hovedskjema": "NAV 11-12.05",
+      "tema": "AAP",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Kjøreliste for godkjent bruk av egen bil",
+      "navn": "Kjøreliste for godkjent bruk av egen bil",
+      "navnEN": "",
+      "hovedskjema": "NAV 00-01.01",
+      "tema": "TSO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Forsikring",
+      "navn": "Søknad fra selvstendig næringsdrivende/frilansere om opptak/endring i forsikring for tillegg til sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-36.05",
+      "tema": "FOS",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Forsikring",
+      "navn": "Søknad fra selvstendig næringsdrivende og frilansere om frivillig opptak i NAVs yrkesskadeordning",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-13.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Grunn- og hjelpestønad",
+      "navn": "Søknad om grunnstønad",
+      "navnEN": "Application for basic benefit",
+      "hovedskjema": "NAV 06-03.04",
+      "tema": "GRU",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Grunn- og hjelpestønad",
+      "navn": "Søknad om hjelpestønad",
+      "navnEN": "Application for assistance allowance",
+      "hovedskjema": "NAV 06-04.04",
+      "tema": "GRU",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Grunn- og hjelpestønad",
+      "navn": "Melding om nytt bankkontonummer (for alle land)",
+      "navnEN": "Notification of new bank account number (for all countries)",
+      "hovedskjema": "NAV 95-20.00",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Egenerklæring for utenlandske sykmeldinger",
+      "navnEN": "Declaration form for Non-Norwegian Medical Certificates",
+      "hovedskjema": "NAV 08-09.06",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-35.01",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Krav om sykepenger – midlertidig ute av inntektsgivende arbeid",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-47.05",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Søknad fra selvstendig næringsdrivende/frilansere om opptak/endring i forsikring for tillegg til sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-36.05",
+      "tema": "FOS",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Søknad om refusjon av reisetilskudd til arbeidsreiser",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-14.01",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Søknad om sykepenger",
+      "navnEN": "Application for sickness benefit",
+      "hovedskjema": "NAV 08-07.04D",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Søknad om unntak fra arbeidsgiveransvar for sykepenger til en arbeidstaker som lider av en langvarig eller kronisk sykdom",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-20.05",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Søknad om unntak fra arbeidsgiveransvar for sykepenger til en arbeidstaker som har sykefravær på grunn av svangerskap",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-20.20",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Søknad om å beholde sykepenger under opphold i utlandet",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-09.07",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Sykepenger",
+      "navn": "Sykepenger - utland, annen dokumentasjon",
+      "navnEN": "Sickness benefit - international, other documentation",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Omsorgspenger",
+      "navn": "Søknad om utbetaling av omsorgspenger for selvstendig næringsdrivende og frilansere",
+      "navnEN": "Søknad om utbetaling av omsorgspenger for selvstendig næringsdrivende og frilansere",
+      "hovedskjema": "NAV 09-06.01",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Omsorgspenger",
+      "navn": "Søknad om ekstra omsorgsdager for et barn som er kronisk sykt, funksjonshemmet eller langvarig sykt",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-06.05",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Omsorgspenger",
+      "navn": "Søknad om utbetaling av omsorgspenger når arbeidsgiver ikke utbetaler",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-09.01",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Pleiepenger og opplæringspenger",
+      "navn": "Søknad om pleiepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-11.05",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Pleiepenger og opplæringspenger",
+      "navn": "Søknad om pleiepenger i livets sluttfase",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-12.05",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Pleiepenger og opplæringspenger",
+      "navn": "Søknad om opplæringspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-11.08",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Pleiepenger og opplæringspenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha opplæringspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 09-35.01",
+      "tema": "OMS",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkesskade",
+      "navn": "Melding om yrkesskade eller yrkessykdom som er påført under arbeid på norsk eller utenlandsk landterritorium",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-07.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkesskade",
+      "navn": "Melding om yrkesskade eller yrkessykdom som er påført i forbindelse med petroleumsvirksomhet til havs",
+      "navnEN": "Report of occupational injury or occupational illness sustained in connection with petroleum activities at sea",
+      "hovedskjema": "NAV 13-06.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkesskade",
+      "navn": "Melding om yrkesskade eller yrkessykdom som er påført under tjeneste på skip eller under fiske/fangst",
+      "navnEN": "Report on occupational injury / personal injury sustained in the course of duties on board ship or during fishing/catching",
+      "hovedskjema": "NAV 13-07.08",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkesskade",
+      "navn": "Melding om yrkesskade eller yrkessykdom som er påført eller oppstått under militær tjenestegjøring",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-08.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkesskade",
+      "navn": "Melding om yrkesskade eller yrkessykdom påført elev/student",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-10.01",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkesskade",
+      "navn": "Søknad om menerstatning",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-17.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkesskade",
+      "navn": "Skadeforklaring ved arbeidsulykke",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-00.21",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkesskade",
+      "navn": "Søknad fra selvstendig næringsdrivende og frilansere om frivillig opptak i NAVs yrkesskadeordning",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-13.05",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkessykdom - tilleggsopplysninger",
+      "navn": "Opplysninger om skadelig påvirkning i arbeid",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-04.20",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkessykdom - tilleggsopplysninger",
+      "navn": "Opplysninger om asbestbruk i arbeid",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-04.21",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkessykdom - tilleggsopplysninger",
+      "navn": "Opplysninger om bruk av løsemidler i arbeid",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-04.22",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkessykdom - tilleggsopplysninger",
+      "navn": "Opplysninger om støvpåvirkning i arbeid",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-04.23",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Yrkessykdom - tilleggsopplysninger",
+      "navn": "Opplysninger om larmpåvirkning i arbeid",
+      "navnEN": "",
+      "hovedskjema": "NAV 13-04.24",
+      "tema": "YRK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Lese- og sekretærhjelp",
+      "navn": "Søknad om lese- og sekretærhjelp for blinde og svaksynte",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.30",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Lese- og sekretærhjelp",
+      "navn": "Regning for lese- og sekretærhjelp for blinde og svaksynte",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.09",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Uføretrygd",
+      "navn": "Søknad om uføretrygd",
+      "navnEN": "Application for disability benefits",
+      "hovedskjema": "NAV 12-06.05",
+      "tema": "UFO",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Inntektsendring - uføretrygd",
+      "navn": "Melding om inntektsendring når du har uføretrygd",
+      "navnEN": "Form for income change - for those who have disability benefits",
+      "hovedskjema": "NAV 12-14.01",
+      "tema": "UFO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Barnetillegg - uføretrygd",
+      "navn": "Søknad om barnetillegg for deg som har uføretrygd",
+      "navnEN": "Application for child supplement – disability benefits",
+      "hovedskjema": "NAV 12-15.01",
+      "tema": "UFO",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Arbeids- og utdanningsreiser",
+      "navn": "Søknad om stønad til arbeids- og utdanningsreiser",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-00.42",
+      "tema": "HJE",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Helse",
+      "underkategori": "Honnørkort - uføretrygd fra et annet EØS-land",
+      "navn": "Bekreftelse på vedtak om uføretrygd for utstedelse av honnørkort",
+      "navnEN": "Confirmation of decision on disability benefit in order to receive a concessionary card",
+      "hovedskjema": "NAV 12-06.15",
+      "tema": "PEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Midlertidig kompensasjon for selvstendig næringsdrivende og frilansere",
+      "navn": "Søknad om midlertidig kompensasjon for tapt inntekt for selvstendig næringsdrivende og frilansere",
+      "navnEN": "Temporary compensation for self-employed and freelancer",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Sykepenger",
+      "navn": "Krav om sykepenger – midlertidig ute av inntektsgivende arbeid",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-47.05",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Sykepenger",
+      "navn": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha sykepenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-35.01",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Sykepenger",
+      "navn": "Søknad om sykepenger",
+      "navnEN": "Application for sickness benefit",
+      "hovedskjema": "NAV 08-07.04D",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "Korona / Covid-19",
+      "underkategori": "Sykepenger",
+      "navn": "Egenerklæring for utenlandske sykmeldinger",
+      "navnEN": "Declaration form for Non-Norwegian Medical Certificates",
+      "hovedskjema": "NAV 08-09.06",
+      "tema": "SYK",
+      "dokumentinnsending": "JA",
+      "soknadsdialog": "JA"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Kjøreliste for godkjent bruk av egen bil",
+      "navnEN": "Kjøreliste for godkjent bruk av egen bil",
+      "hovedskjema": "NAV 11-12.10",
+      "tema": "TSO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Søknad om spesialutstyr til motorkjøretøy",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.41",
+      "tema": "BIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Fullmakt i samband med søknad om hjelpemiddel",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.04",
+      "tema": "HJE",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Vurdering av arbeidsmulighet/Sykmelding ved 7 uker",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-07.04P",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Klage/anke",
+      "navnEN": "Complaint/appeal",
+      "hovedskjema": "NAV 90-00.08",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Søknad om tilleggsstønader",
+      "navnEN": "Søknad om tilleggsstønader",
+      "hovedskjema": "NAV 11-12.12",
+      "tema": "TSO",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Sykepenger - bekreftelse på gjennomført behandling eller klage/anke",
+      "navnEN": "Sickness benefit - confirmation of treatment or complaint",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Sykepenger - krav og inntektsopplysninger",
+      "navnEN": "Sickness benefit - claims and income information",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Søknad om tilleggsstønader arbeidssøker",
+      "navnEN": "Søknad om tilleggsstønader arbeidssøker",
+      "hovedskjema": "NAV 11-12.13",
+      "tema": "TSR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Vurdering av arbeidsmulighet/Sykmelding",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-07.04L",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Christians søknadsobjekt - ikke rør",
+      "navnEN": "",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Vurdering av arbeidsmulighet/Sykmelding ved 17 uker",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-07.04Q",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Klage på refusjon av omsorgspenger",
+      "navnEN": "",
+      "hovedskjema": "NAV 90-00.08",
+      "tema": "OMS",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Diverse dokumentasjon klage og anke",
+      "navnEN": "",
+      "hovedskjema": "NAV 00-03.00",
+      "tema": "GEN",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Søknad om inkluderingstilskudd ",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.88",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": " Kjøreliste for godkjent bruk av egen bil arbeidssøker",
+      "navnEN": " Kjøreliste for godkjent bruk av egen bil arbeidssøker",
+      "hovedskjema": "NAV 11-12.11",
+      "tema": "TSR",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Avtale om oppstart av lønnstilskudd",
+      "navnEN": "",
+      "hovedskjema": "NAV 76-13.02",
+      "tema": "TIL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Ortopediske hjelpemidler - Søknad om fornyelse",
+      "navnEN": "",
+      "hovedskjema": "NAV 10-07.11",
+      "tema": "HEL",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    },
+    {
+      "kategori": "UDEFINERT",
+      "underkategori": "UDEFINERT",
+      "navn": "Vurdering av arbeidsmulighet/Sykmelding ved 39 uker",
+      "navnEN": "",
+      "hovedskjema": "NAV 08-07.04R",
+      "tema": "SYK",
+      "dokumentinnsending": "NEI",
+      "soknadsdialog": "NEI"
+    }
+  ]
+}
