@@ -47,7 +47,7 @@ echo -e "-----------------------------------------------------------"
 echo -e "\t${GREEN}Fetching NAIS config files: FILE${NO_COLOR}"
 echo -e "-----------------------------------------------------------"
 
-FYLLUT_NAIS_URL="${MONOREPO_BASE_URL}/${MONOREPO_COMMIT_HASH}/packages/fyllut/.nais"
+FYLLUT_NAIS_URL="${MONOREPO_BASE_URL}/${MONOREPO_COMMIT_HASH}/.nais/fyllut"
 
 echo -e "${GREEN}Fetching files:${NO_COLOR}"
 echo -e "- config.yaml"
