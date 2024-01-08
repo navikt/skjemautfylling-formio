@@ -58,6 +58,8 @@ jobs:
     if: github.ref == 'refs/heads/master'
     needs: "package-and-push-fyllut"
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -67,9 +69,8 @@ jobs:
       - name: Fetch NAIS config
         run: bin/fetchNaisConfig.sh prod fyllut-config
       - name: "Deploy to prod"
-        uses: "nais/deploy/actions/deploy@v1"
+        uses: "nais/deploy/actions/deploy@v2"
         env:
-          APIKEY: "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           CLUSTER: "prod-gcp"
           RESOURCE: "./fyllut-config/config.yaml"
           VARS: "./fyllut-config/prod.yaml"
@@ -100,15 +101,16 @@ jobs:
     if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Fetch NAIS config
         run: bin/fetchNaisConfig.sh dev fyllut-config
       - name: "Deploy to dev"
-        uses: "nais/deploy/actions/deploy@v1"
+        uses: "nais/deploy/actions/deploy@v2"
         env:
-          APIKEY: "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           CLUSTER: "dev-gcp"
           RESOURCE: "./fyllut-config/config.yaml"
           VARS: "./fyllut-config/dev.yaml"
@@ -119,15 +121,16 @@ jobs:
     if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Fetch NAIS config
         run: bin/fetchNaisConfig.sh dev-delingslenke fyllut-config
       - name: "Deploy to dev"
-        uses: "nais/deploy/actions/deploy@v1"
+        uses: "nais/deploy/actions/deploy@v2"
         env:
-          APIKEY: "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           CLUSTER: "dev-gcp"
           RESOURCE: "./fyllut-config/config.yaml"
           VARS: "./fyllut-config/dev-delingslenke.yaml"

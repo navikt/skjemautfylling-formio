@@ -11,6 +11,8 @@ on:
       - '.nais/dev-alert.yaml'
       - '.nais/prod-alert.yaml'
       - '.github/workflows/alert-deploy.yaml'
+permissions:
+  id-token: write
 
 jobs:
   dev-deploy:
@@ -20,9 +22,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Deploy to dev
-        uses: nais/deploy/actions/deploy@v1
+        uses: nais/deploy/actions/deploy@v2
         env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
           RESOURCE: .nais/alerts.yaml
           VARS: .nais/dev-alert.yaml
@@ -34,9 +35,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Deploy to prod
-        uses: nais/deploy/actions/deploy@v1
+        uses: nais/deploy/actions/deploy@v2
         env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
           RESOURCE: .nais/alerts.yaml
           VARS: .nais/prod-alert.yaml
