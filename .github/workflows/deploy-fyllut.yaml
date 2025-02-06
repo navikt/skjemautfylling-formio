@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - dev-deploy
+      - test-publishing
 env:
   IMAGE_FYLLUT_BASE: "europe-north1-docker.pkg.dev/nais-management-233d/skjemadigitalisering/skjemabygging-formio-${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
   MONOREPO_BASE_URL: "https://raw.githubusercontent.com/navikt/skjemabygging-formio"
@@ -98,7 +99,7 @@ jobs:
 
   deploy-fyllut-to-dev:
     name: "Deploy 'fyllut' to dev"
-    if: github.ref == 'refs/heads/dev-deploy'
+    if: github.ref != 'refs/heads/master'
     needs: "package-and-push-fyllut"
     runs-on: ubuntu-latest
     permissions:
@@ -118,7 +119,7 @@ jobs:
 
   deploy-fyllut-delingslenke-to-dev:
     name: "Deploy 'fyllut'-delingslenke to dev"
-    if: github.ref == 'refs/heads/dev-deploy'
+    if: github.ref != 'refs/heads/master'
     needs: "package-and-push-fyllut"
     runs-on: ubuntu-latest
     permissions:
@@ -138,7 +139,7 @@ jobs:
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
-    if: failure() && (github.ref == 'refs/heads/dev-deploy')
+    if: failure() && (github.ref != 'refs/heads/master')
     needs: [deploy-fyllut-to-dev, deploy-fyllut-delingslenke-to-dev]
     runs-on: ubuntu-latest
     steps:
@@ -146,5 +147,5 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_DEV }}
-          SLACK_FOOTER: "Deploy av fyllut til dev har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
+          SLACK_FOOTER: "Deploy av fyllut til dev har feilet (${{ github.ref }}). Undersøk om det kan påvirke neste publisering fra byggeren."
           SLACK_COLOR: "#ff9100"
