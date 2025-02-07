@@ -119,7 +119,7 @@ jobs:
 
   deploy-fyllut-delingslenke-to-dev:
     name: "Deploy 'fyllut'-delingslenke to dev"
-    if: github.ref != 'refs/heads/master'
+    if: github.ref == 'refs/heads/dev-deploy'
     needs: "package-and-push-fyllut"
     runs-on: ubuntu-latest
     permissions:
@@ -139,7 +139,7 @@ jobs:
 
   notify-dev-deployment-failure:
     name: "Notify dev deployment failure"
-    if: failure() && (github.ref != 'refs/heads/master')
+    if: failure() && (github.ref == 'refs/heads/dev-deploy')
     needs: [deploy-fyllut-to-dev, deploy-fyllut-delingslenke-to-dev]
     runs-on: ubuntu-latest
     steps:
@@ -147,5 +147,5 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_DEV }}
-          SLACK_FOOTER: "Deploy av fyllut til dev har feilet (${{ github.ref }}). Undersøk om det kan påvirke neste publisering fra byggeren."
+          SLACK_FOOTER: "Deploy av fyllut til dev har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
           SLACK_COLOR: "#ff9100"
