@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - dev-deploy
+      - test-publishing
 env:
   IMAGE_FYLLUT_BASE: "europe-north1-docker.pkg.dev/nais-management-233d/skjemadigitalisering/skjemabygging-formio-${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
   MONOREPO_BASE_URL: "https://raw.githubusercontent.com/navikt/skjemabygging-formio"
@@ -98,7 +99,7 @@ jobs:
 
   deploy-fyllut-to-dev:
     name: "Deploy 'fyllut' to dev"
-    if: github.ref == 'refs/heads/dev-deploy'
+    if: github.ref != 'refs/heads/master'
     needs: "package-and-push-fyllut"
     runs-on: ubuntu-latest
     permissions:
