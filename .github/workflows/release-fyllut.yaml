@@ -16,7 +16,7 @@ jobs:
         with:
           private-key: ${{ secrets.PUBLISHING_APP_PRIVATE_KEY }}
           app-id: ${{ secrets.PUBLISHING_APP_ID }}
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
           token: ${{ steps.generate-token.outputs.token }}
