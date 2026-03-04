@@ -12,6 +12,11 @@ updates:
         update-types:
           - 'minor'
           - 'patch'
+      eslint-major:
+        patterns:
+          - '*eslint*'
+        update-types:
+          - 'major'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
