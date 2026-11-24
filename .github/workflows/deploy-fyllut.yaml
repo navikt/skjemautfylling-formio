@@ -5,6 +5,7 @@ on:
       - master
       - dev-deploy
       - test-publishing
+      - test/deploy-stack
 env:
   IMAGE_FYLLUT_BASE: "europe-north1-docker.pkg.dev/nais-management-233d/skjemadigitalisering/skjemabygging-formio-${{ github.ref == 'refs/heads/master' && 'fyllut-base' || 'fyllut-base-dev' }}"
   MONOREPO_BASE_URL: "https://raw.githubusercontent.com/navikt/skjemabygging-formio"
