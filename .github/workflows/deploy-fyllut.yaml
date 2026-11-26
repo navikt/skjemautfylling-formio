@@ -23,8 +23,8 @@ jobs:
       packages: "read"
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: "lts/*"
 
@@ -32,7 +32,7 @@ jobs:
         run: echo "MONOREPO_GIT_SHA=$(cat MONOREPO)" >> $GITHUB_ENV
 
       - name: "Build and push Docker image"
-        uses: nais/docker-build-push@v0
+        uses: nais/docker-build-push@6394144a53cad0332745f24a8302f5efaf81719a # v1.0.0
         id: docker-build-push
         with:
           team: skjemadigitalisering
@@ -63,14 +63,14 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: "lts/*"
       - name: Fetch NAIS config
         run: bin/fetchNaisConfig.sh prod fyllut-config
       - name: "Deploy to prod"
-        uses: "nais/deploy/actions/deploy@v2"
+        uses: nais/deploy/actions/deploy@6a9dcd6df697ec2d38edc78cadb0b9acd1232f50 # v3
         env:
           CLUSTER: "prod-gcp"
           RESOURCE: "./fyllut-config/config.yaml"
@@ -91,7 +91,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Slack notification"
-        uses: rtCamp/action-slack-notify@v2
+        uses: rtCamp/action-slack-notify@06cc13f74fa8d4d2296c09455d91e9453e4025f4 # v2.4.1
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_FOOTER: "Deploy av fyllut til prod har feilet."
@@ -106,11 +106,11 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Fetch NAIS config
         run: bin/fetchNaisConfig.sh dev fyllut-config
       - name: "Deploy to dev"
-        uses: "nais/deploy/actions/deploy@v2"
+        uses: nais/deploy/actions/deploy@6a9dcd6df697ec2d38edc78cadb0b9acd1232f50 # v3
         env:
           CLUSTER: "dev-gcp"
           RESOURCE: "./fyllut-config/config.yaml"
@@ -126,11 +126,11 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Fetch NAIS config
         run: bin/fetchNaisConfig.sh dev-delingslenke fyllut-config
       - name: "Deploy to dev"
-        uses: "nais/deploy/actions/deploy@v2"
+        uses: nais/deploy/actions/deploy@6a9dcd6df697ec2d38edc78cadb0b9acd1232f50 # v3
         env:
           CLUSTER: "dev-gcp"
           RESOURCE: "./fyllut-config/config.yaml"
@@ -144,7 +144,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Slack notification"
-        uses: rtCamp/action-slack-notify@v2
+        uses: rtCamp/action-slack-notify@06cc13f74fa8d4d2296c09455d91e9453e4025f4 # v2.4.1
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_DEV }}
           SLACK_FOOTER: "Deploy av fyllut til dev har feilet. Undersøk om det kan påvirke neste publisering fra byggeren."
